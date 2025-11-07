@@ -11,6 +11,5 @@ execute positioned ~ ~1 ~ facing entity @n[tag=cryptid,type=!marker,tag=!cryptid
 
 ##trol
 
-execute as @s store result score @s cryptid.player.random run random value 1..250
-
+execute if score @s cryptid.player.harmony matches ..-4000 as @s store result score @s cryptid.player.random run random value 1..250
 execute if score @s cryptid.player.random matches 1 run function cryptid:events/cryptid/tortured
