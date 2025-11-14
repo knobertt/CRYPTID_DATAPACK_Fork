@@ -7,5 +7,5 @@ playsound minecraft:cryptid.mob.death ambient @a[distance=..20] ~ ~ ~ 1.5 0.8
 
 fill ~-4 ~-4 ~-4 ~4 ~4 ~4 red_concrete_powder replace nether_wart_block
 
-execute if score @s cryptid.player.harmony matches ..-5000 run scoreboard players set @s cryptid.player.harmony 0
+execute if score @s cryptid.player.harmony matches ..0 run scoreboard players set @s cryptid.player.harmony 0
 advancement revoke @s only cryptid:playerkillheart
