@@ -9,7 +9,7 @@ fill ~1 ~1 ~1 ~-1 ~-1 ~-1 minecraft:crimson_hyphae replace #minecraft:logs
 fill ~1 ~1 ~1 ~-1 ~-1 ~-1 crimson_nylium replace #minecraft:moss_replaceable
 fill ~3 ~3 ~3 ~-3 ~-3 ~-3 netherrack replace #minecraft:base_stone_overworld
 
-tp @s ~ ~ ~ facing entity @e[type=vindicator, tag=cryptid.vorheart, limit=1, sort=nearest]
+tp @s ~ ~ ~ facing entity @n[type=vindicator, tag=cryptid.vorheart, limit=1, distance= ..300]
 
 execute store result score @s cryptid.player.random run random value 1..10
 

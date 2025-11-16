@@ -18,21 +18,21 @@ playsound minecraft:cryptid.shotfire ambient @a[distance=0..20] ~ ~ ~ 1 1.2
 
 
 ##particles
-execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^0.01 ^ ^1 ^ ^ ^1000000 0.00001 0
-execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^ ^ ^0.095 ^ ^ ^1000000 0.00001 0
-execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^ ^-0.01 ^0.015 ^ ^ ^1000000 0.00001 0
+execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^0.01 ^ ^1 ^ ^ ^1000000 0.000005 0
+execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^ ^ ^0.095 ^ ^ ^1000000 0.000005 0
+execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^ ^-0.01 ^0.015 ^ ^ ^1000000 0.000005 0
 
 execute as @p at @s anchored eyes run particle minecraft:smoke ^ ^ ^0.3 0.2 0.2 0.2 0.001 50
 execute as @p at @s anchored eyes run particle minecraft:flash ^ ^ ^3.3 0.2 0.2 0.2 0.001 50
 
 
 
-execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^0.1 ^ ^1 ^4 ^ ^100 0.0002 0
-execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^-0.1 ^ ^-1 ^ ^-4 ^100 0.0002 0
-execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^0.1 ^0.1 ^1 ^1 ^4 ^100 0.0002 0
-execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^-0.1 ^-0.1 ^-1 ^-1 ^4 ^100 0.0002 0
-execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^ ^-0.1 ^ ^-1 ^4 ^100 0.0002 0
-execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^ ^0.1 ^ ^1 ^4 ^100 0.0002 0
+execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^0.1 ^ ^1 ^4 ^ ^100 0.0008 0
+execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^-0.1 ^ ^-1 ^ ^-4 ^100 0.0008 0
+execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^0.1 ^0.1 ^1 ^1 ^4 ^100 0.0008 0
+execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^-0.1 ^-0.1 ^-1 ^-1 ^4 ^100 0.0008 0
+execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^ ^-0.1 ^ ^-1 ^4 ^100 0.0008 0
+execute as @p at @s anchored eyes run particle minecraft:campfire_signal_smoke ^ ^0.1 ^ ^1 ^4 ^100 0.0008 0
 
 
 

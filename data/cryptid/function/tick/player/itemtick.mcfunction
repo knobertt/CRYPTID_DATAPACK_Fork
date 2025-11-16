@@ -94,7 +94,7 @@ execute as @s at @s if items entity @s weapon.mainhand minecraft:warped_fungus_o
 
 execute as @s[scores={cryptid.click=1..}] at @s if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.catcher:1}] run function cryptid:action/catcher/placecatcher
 
-execute as @s[scores={cryptid.player.crouch=1..,cryptid.click=1..,cryptid.pick.cooldown=..2}] at @s if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.pickaxe:1}] run function cryptid:action/pickaxe/usepick
+execute as @s[scores={cryptid.player.crouch=1..,cryptid.click=1..,cryptid.pick.cooldown=..2}] at @s if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.pickaxe:1}] if entity @n[tag=cryptid.vorheart,distance=..300] run function cryptid:action/pickaxe/usepick
 
 
 
