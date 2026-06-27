@@ -270,6 +270,10 @@ execute as @s[tag=cryptid.readytoswap] at @s run tag @s remove cryptid.readytosw
 ##death logic
 execute as @s[scores={cryptid.deaths=1..,cryptid.maxlives=1}] at @s run tellraw @a ["",{"color":"dark_red","bold":true,"selector":"@s"}," has run out of lives! May their soul rest in peace.."]
 
+#donate lives
+execute if score .global cryptid.challenge matches 3 as @s[scores={cryptid.deaths=1..,cryptid.maxlives=1}] run tellraw @a ["Donate life: ",{"text":"CLICK ","clickEvent":{"action":"run_command","value":"/trigger cryptid.trigger.donatelife set 1"},"bold":true,"color":"red"}]
+execute as @a[scores={cryptid.trigger.donatelife=1}] run function cryptid:action/player/donate
+
 execute as @s[scores={cryptid.deaths=1..,cryptid.maxlives=1}] at @s run playsound minecraft:entity.wither.death ambient @a ~ ~ ~ 0.1 0.1
 
 execute as @s[scores={cryptid.deaths=1..}] at @s run function cryptid:action/player/ondeath

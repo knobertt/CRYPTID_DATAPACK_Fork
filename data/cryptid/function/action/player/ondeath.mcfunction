@@ -12,7 +12,7 @@ tag @s remove trap.trapped
 scoreboard players remove @s cryptid.maxlives 1
 playsound minecraft:cryptid.soul.trap ambient @s
 ##killingcryptyids
-kill @e[tag=cryptid, sort=nearest, limit=3, distance=0..7,tag=!cryptid.totem2,tag=!cryptid.lessertotem,tag=!cryptid.catcher]
+execute unless entity @a[distance=0.1..70] run kill @e[tag=cryptid, sort=nearest, limit=3, distance=0..7,tag=!cryptid.totem2,tag=!cryptid.lessertotem,tag=!cryptid.catcher]
 
 scoreboard players set @s cryptid.player.harmony 0
 
@@ -20,7 +20,7 @@ scoreboard players set @s cryptid.player.harmony 0
 ##kill all lost souls prior to spawning a new one
 kill @e[type=minecraft:vindicator, tag=cryptid.digger]
 
-summon vindicator ~ ~ ~ {CustomName:'[{"text":"Lost Soul","color":"red"}]', Tags:["cryptid", "cryptid.digger"], Silent:1, ArmorItems:[{},{},{},{id:potion,components:{"minecraft:custom_model_data":1303},count:1}],ArmorDropChances:[0f,0f,0f,0f]}
+summon vindicator ~ ~ ~ {CustomName:'[{"text":"Lost Soul","color":"red"}]', Tags:["cryptid", "cryptid.digger"], Silent:1b, ArmorItems:[{},{},{},{id:potion,components:{"minecraft:custom_model_data":1303},count:1}],ArmorDropChances:[0f,0f,0f,0f],attributes:[{id:"generic.knockback_resistance",base:0.7f},{id:"generic.follow_range",base:50f}]}
 scoreboard players set @e[tag=cryptid.digger,type=vindicator] cryptid.mob.class 2
 
 execute as @e[type=vindicator, tag=cryptid.digger, tag=!cryptid.markerapplied] at @s run function cryptid:action/general/spawntickmarker {"name":"tickdigger"}
