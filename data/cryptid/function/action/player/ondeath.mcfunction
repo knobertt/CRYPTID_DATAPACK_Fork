@@ -12,7 +12,7 @@ tag @s remove trap.trapped
 scoreboard players remove @s cryptid.maxlives 1
 playsound minecraft:cryptid.soul.trap ambient @s
 ##killingcryptyids
-execute unless entity @a[distance=0.1..70] run kill @e[tag=cryptid, sort=nearest, limit=3, distance=0..7,tag=!cryptid.totem2,tag=!cryptid.lessertotem,tag=!cryptid.catcher]
+execute unless entity @a[distance=0.1..70] run kill @e[tag=cryptid, sort=nearest, limit=3, distance=0..7,tag=!cryptid.totem2,tag=!cryptid.lessertotem,tag=!cryptid.catcher,tag=!cryptid.worldsky]
 
 scoreboard players set @s cryptid.player.harmony 0
 

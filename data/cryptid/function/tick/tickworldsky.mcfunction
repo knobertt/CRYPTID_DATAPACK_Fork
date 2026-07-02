@@ -9,6 +9,11 @@ execute if score .global cryptid.skytime matches 200..1201 rotated as @p at @p a
 
 execute store result score @s cryptid.random run random value 1..200
 
+execute if score @p cryptid.deaths matches 1.. run scoreboard players reset .global cryptid.skytime
+execute if score @p cryptid.deaths matches 1.. run stopsound @p
+execute if score @p cryptid.deaths matches 1.. run kill @s
+
+
 
 execute as @p unless predicate cryptid:worldsky_check run return fail
 
