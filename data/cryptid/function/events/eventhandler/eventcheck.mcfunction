@@ -40,8 +40,13 @@ execute at @s as @s[y=40,dy=-1000] if score @s cryptid.event.random matches 1..5
 execute at @s as @s[y=40,dy=-1000] at @s run return run execute at @s if score @s cryptid.event.random matches 1..90 run scoreboard players set @s cryptid.event.random 400001
 
 #sky ONLY  events
+## world skylimit
+execute at @s as @s[y=300,dy=1000] at @s unless score .global cryptid.skytime matches -2147483648..2147483647 run function cryptid:events/cryptid/worldsky
+execute if score .global cryptid.skytime matches -2147483648..2147483647 run return run execute at @s if score @s cryptid.event.random matches 1..90 run scoreboard players set @s cryptid.event.random 400001
+## Sky
+execute at @s as @s[y=110,dy=299] at @s run function cryptid:events/eventhandler/macroroll {"eventgroup":"sky"}
 
-execute at @s as @s[y=110,dy=1000] at @s run function cryptid:events/eventhandler/macroroll {"eventgroup":"sky"}
+
 
 ####world fury events
 

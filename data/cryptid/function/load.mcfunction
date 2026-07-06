@@ -137,6 +137,8 @@ scoreboard objectives add cryptid.mobspeedbase dummy
 
 scoreboard objectives add cryptid.worldtimer dummy
 scoreboard objectives add cryptid.trigger.tutorialskip trigger
+scoreboard objectives add cryptid.trigger.donatelife trigger
+
 
 scoreboard objectives add cryptid.challenge dummy
 ##heartcount

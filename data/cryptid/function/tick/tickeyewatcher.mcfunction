@@ -16,7 +16,7 @@ execute store result score @s cryptid.player.random run random value 1..30000
 
 
 execute if entity @p[distance=220..] run function cryptid:events/quietkill
-execute if score @s cryptid.player.random matches 1..10 run function cryptid:events/quietkill
+execute if score @s[tag=!cryptid.eyeseen] cryptid.player.random matches 1..100 if entity @p[distance=100..] run function cryptid:events/quietkill
 
 
 ##ai

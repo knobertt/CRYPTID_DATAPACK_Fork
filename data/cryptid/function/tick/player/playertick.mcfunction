@@ -128,8 +128,7 @@ execute as @s at @s run execute unless items entity @s weapon.mainhand sugar[min
 #execute as @e[distance=0..3, type=firework_rocket] at @s if entity @s[type=firework_rocket, nbt={FireworksItem:{components:{"minecraft:custom_data":{cryptid.shotgunarrow:2b}}}}] at @s run function cryptid:action/shotgun/shotgunhandler
 #execute as @e[distance=0..3, type=firework_rocket] at @s if entity @s[type=firework_rocket, nbt={FireworksItem:{components:{"minecraft:custom_data":{cryptid.shotgunarrow:3b}}}}] at @s run function cryptid:action/shotgun/shotgunhandler
 
-##skytime
-scoreboard players remove @s[scores={cryptid.skytime=1..}] cryptid.skytime 1
+
 scoreboard players set @s cryptid.range 10
 
 ##tick world flux first
@@ -190,21 +189,9 @@ execute if score @s cryptid.sleep matches 1.. run scoreboard players remove @s c
 execute store result score @s cryptid.random run random value 1..40
 execute if score @s cryptid.random matches 1 run title @s times 0 3t 0
 
-###worldskyevents
+
 execute store result score @s cryptid.random run random value 1..200
-
 execute if score @s cryptid.random matches 1 run tag @s remove cryptid.mouthtarget
-
-#3black screen worldskyevent
-execute as @s at @s[y=60, dy=1000] if score @s cryptid.skytime matches 200..800 run tag @s add cryptid.blackscreen
-execute as @s at @s[y=60, dy=1000] if score @s cryptid.random matches 1 if score @s cryptid.skytime matches 900..1000 run tellraw @a {"text":"[Error] Ignoring unknown tag 'minecraft:freedom.approaching'","color":"red"}
-execute as @s at @s[y=60, dy=1000] if score @s cryptid.random matches 1 if score @s cryptid.skytime matches 750..900 run tellraw @a {"text":"[Warning] Core shader script has been dropped, this may be a bug","color":"red"}
-execute as @s at @s[y=60, dy=1000] if score @s cryptid.random matches 1..5 if score @s cryptid.skytime matches 450..750 run tellraw @a {"text":"[Warning] Your y level is too high","color":"red"}
-execute as @s at @s[y=60, dy=1000] if score @s cryptid.random matches 1..5 if score @s cryptid.skytime matches 250..450 run tellraw @a {"text":"Get inside the earth","color":"red"}
-execute as @s at @s[y=60, dy=1000] if score @s cryptid.skytime matches 250..260 run playsound minecraft:cryptid.screen.corrupted ambient @s ~ ~ ~ 10000 1
-execute as @s at @s[y=60, dy=1000] if score @s cryptid.skytime matches 250..260 run tp @s ~ 1000 ~
-execute as @s at @s if score @s cryptid.skytime matches 250..260 run stopsound @a
-execute as @s at @s if score @s cryptid.skytime matches 0..249 run kill @e[type=vindicator, tag=cryptid.worldsky]
 
 
 ######################looking spider and looking cryptyids
@@ -270,6 +257,10 @@ execute as @s[tag=cryptid.readytoswap] at @s run tag @s remove cryptid.readytosw
 ##death logic
 execute as @s[scores={cryptid.deaths=1..,cryptid.maxlives=1}] at @s run tellraw @a ["",{"color":"dark_red","bold":true,"selector":"@s"}," has run out of lives! May their soul rest in peace.."]
 
+#donate lives
+execute if score .global cryptid.challenge matches 3 as @s[scores={cryptid.deaths=1..,cryptid.maxlives=1}] run tellraw @a ["Donate life: ",{"text":"CLICK ","clickEvent":{"action":"run_command","value":"/trigger cryptid.trigger.donatelife set 1"},"bold":true,"color":"red"}]
+execute as @a[scores={cryptid.trigger.donatelife=1}] run function cryptid:action/player/donate
+
 execute as @s[scores={cryptid.deaths=1..,cryptid.maxlives=1}] at @s run playsound minecraft:entity.wither.death ambient @a ~ ~ ~ 0.1 0.1
 
 execute as @s[scores={cryptid.deaths=1..}] at @s run function cryptid:action/player/ondeath
@@ -313,8 +304,8 @@ execute store result score @s cryptid.random run random value 1..20
 
 execute if score @s[tag=!cryptid.nokb] cryptid.random matches 1 run attribute @s minecraft:generic.knockback_resistance modifier remove 1300
 
-execute unless block ~ ~-1 ~ air run attribute @s minecraft:generic.gravity modifier remove 1301
-execute unless block ~ ~-1 ~ air run attribute @s minecraft:generic.fall_damage_multiplier modifier remove 1301
+execute unless block ~ ~-1 ~ #air run attribute @s minecraft:generic.gravity modifier remove 1301
+execute unless block ~ ~-1 ~ #air run attribute @s minecraft:generic.fall_damage_multiplier modifier remove 1301
 
 
 ##fearsreen and effects
