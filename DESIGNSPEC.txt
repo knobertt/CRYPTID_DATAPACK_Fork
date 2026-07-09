@@ -1,16 +1,5 @@
 ***************************Welcome to the Official CRYPTID Design Spec!********************************
-Realease Beta Branch. no new
-
-
-This doc is a work in progress, and will go over all CRYPTID core functions, technical usage, libraries, and methods of modifying or summoning events.
-Feel free to push suggestions in our discord, I am not sure how many people will use this document.
-The majority of the mod is made by me, Steampwered; Fin mun did a few textures, Hersical and Navojj composed part of the music, and Fhursday provided a texture and a secret track.
-
-
-
-
-[Glossary]
-
+The Working Beta branch in preperation for full 1.1.1 realease
 
 1. File structure
 2. Entity methods
