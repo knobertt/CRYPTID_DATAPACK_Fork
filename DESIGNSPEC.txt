@@ -1,5 +1,5 @@
 ***************************Welcome to the Official CRYPTID Design Spec!********************************
-
+Realease Beta Branch. no new
 
 
 This doc is a work in progress, and will go over all CRYPTID core functions, technical usage, libraries, and methods of modifying or summoning events.
