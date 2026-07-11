@@ -30,10 +30,14 @@
         "text": ""
       },
       {
-        "text": "Tracking Cryptid: [",
+        "text": "Personal Flux: [",
         "extra": [
           {
-            "selector": "@e[tag=cryptid,sort=nearest,limit=1, type=!armor_stand]",
+            "score": {
+              "objective": "cryptid.player.flux",
+              "name": "@s"
+            },
+            "type": "score",
             "extra": [
               {
                 "text": "]",
@@ -42,7 +46,7 @@
                 "italic": false
               }
             ],
-            "color": "#ff1100",
+            "color": "#c25151",
             "bold": true,
             "italic": false
           }

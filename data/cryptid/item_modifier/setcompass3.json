@@ -59,7 +59,13 @@
         "text": ""
       },
       {
-        "text": "Supernatural Instance Meter: [0.000",
+        "text": "Supernatural Instance Meter",
+                "color": "#c25151",
+                "bold": true,
+                "italic": false
+      },
+      {
+        "text": "Chance of Anomaly every 10 seconds is (1 in ",
         "extra": [
           {
             "score": {
@@ -69,7 +75,7 @@
             "type": "score",
             "extra": [
               {
-                "text": "%]",
+                "text": ")",
                 "color": "#672222",
                 "bold": false,
                 "italic": false
