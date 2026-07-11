@@ -104,7 +104,7 @@ Compromise for current datapack version
 
 
 
-  TOOOO DOOOOOOOOO
+  TOOOO DOOOOOOOOO for full realse
 Finish athame
     - model
 
@@ -127,6 +127,13 @@ Elder tree ?
 - soma maybe more cryptid spawns or no despawns within the soma biome
 - slight event percetage increas on feshy blocks?
 
+Rework spotlight?
+
+Check Head peeper
+
+Mapp marker
+
+
 Structures
 - more story Structures
 - structure place configuration
@@ -136,6 +143,3 @@ Dream
 - finish it visuals
 - incorperate into events more
 
-Fury events
-- balance occurance
-- rework?? where ever we left off

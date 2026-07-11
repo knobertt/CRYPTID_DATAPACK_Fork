@@ -41,13 +41,13 @@ execute if score .global cryptid.eventcap < .current cryptid.eventcap run scoreb
 
 
 
-scoreboard players set @s[scores={cryptid.player.harmony=10000..20000}] cryptid.player.event 2
-scoreboard players set @s[scores={cryptid.player.harmony=5000..10000}] cryptid.player.event 12
-scoreboard players set @s[scores={cryptid.player.harmony=0..5000}] cryptid.player.event 21
-scoreboard players set @s[scores={cryptid.player.harmony=-5000..0}] cryptid.player.event 38
-scoreboard players set @s[scores={cryptid.player.harmony=-10000..-5000}] cryptid.player.event 67
-scoreboard players set @s[scores={cryptid.player.harmony=-20000..-10000}] cryptid.player.event 89
-execute if score .allow cryptid.eventcap matches 0 run scoreboard players set @s cryptid.player.event 0
+#scoreboard players set @s[scores={cryptid.player.harmony=10000..20000}] cryptid.player.event 2
+#scoreboard players set @s[scores={cryptid.player.harmony=5000..10000}] cryptid.player.event 12
+#scoreboard players set @s[scores={cryptid.player.harmony=0..5000}] cryptid.player.event 21
+#scoreboard players set @s[scores={cryptid.player.harmony=-5000..0}] cryptid.player.event 38
+#scoreboard players set @s[scores={cryptid.player.harmony=-10000..-5000}] cryptid.player.event 67
+#scoreboard players set @s[scores={cryptid.player.harmony=-20000..-10000}] cryptid.player.event 89
+#execute if score .allow cryptid.eventcap matches 0 run scoreboard players set @s cryptid.player.event 0
 
 
 ################################alert system

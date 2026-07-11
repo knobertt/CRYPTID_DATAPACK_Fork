@@ -6,9 +6,9 @@ scoreboard players operation @s cryptid.challengesec /= 20 cryptid.challengetime
 title @a actionbar ["",{"text":"Seconds survived: ","color":"dark_red"},{"bold":true,"color":"red","score":{"objective":"cryptid.challengesec","name":"@s"}}]
 
 ##apply ALL events
-function cryptid:events/eventhandler/lowevents
-function cryptid:events/eventhandler/midevents
-function cryptid:events/eventhandler/highevents
+function cryptid:events/eventhandler/macroroll {"eventgroup":"low"}
+function cryptid:events/eventhandler/macroroll {"eventgroup":"mid"}
+function cryptid:events/eventhandler/macroroll {"eventgroup":"high"}
 ##memory cleanup
 kill @e[tag=cryptid, distance=100..]
 
