@@ -15,6 +15,9 @@ function cryptid:events/eventhandler/primercheck
 execute if dimension cryptid:below run function cryptid:tick/player/dimension/belowtick
 
 
+##decrease void ambience timer
+execute if score @s cryptid.voidambiencetimer matches 1.. run scoreboard players remove @s cryptid.voidambiencetimer 1
+
 ##swrods
 
 execute if score @s cryptid.squareswordtimer matches 1.. run function cryptid:action/player/squaresword

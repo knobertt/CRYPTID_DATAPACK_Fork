@@ -36,6 +36,10 @@ execute if score @s cryptid.random matches 3 run function cryptid:action/give/gi
 
 
 
+
+##init void function timer
+scoreboard players set @s cryptid.voidambiencetimer 1
+
 tag @s add player.tutorial
 tag @s add tutorial.active
 
