@@ -1,14 +1,5 @@
 execute store result score @s cryptid.player.random run random value 1..60
 
-##fill ~4 ~4 ~4 ~-4 ~-4 ~-4 furnace[facing=south,lit=true] replace furnace[facing=south]
-##fill ~4 ~4 ~4 ~-4 ~-4 ~-4 furnace[facing=north,lit=true] replace furnace[facing=north]
-##fill ~4 ~4 ~4 ~-4 ~-4 ~-4 furnace[facing=west,lit=true] replace furnace[facing=west]
-##fill ~4 ~4 ~4 ~-4 ~-4 ~-4 furnace[facing=east,lit=true] replace furnace[facing=east]
-
-##fill ~4 ~4 ~4 ~-4 ~-4 ~-4 blast_furnace[facing=south,lit=true] replace blast_furnace[facing=south]
-##fill ~4 ~4 ~4 ~-4 ~-4 ~-4 blast_furnace[facing=north,lit=true] replace blast_furnace[facing=north]
-##fill ~4 ~4 ~4 ~-4 ~-4 ~-4 blast_furnace[facing=west,lit=true] replace blast_furnace[facing=west]
-##fill ~4 ~4 ~4 ~-4 ~-4 ~-4 blast_furnace[facing=east,lit=true] replace blast_furnace[facing=east]
 
 fill ~4 ~4 ~4 ~-4 ~-4 ~-4 netherrack replace cobblestone
 
