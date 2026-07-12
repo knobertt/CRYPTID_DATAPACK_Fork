@@ -1,5 +1,5 @@
 execute as @s[tag=!init] at @s run scoreboard players set @s pinhead.state 0
-execute as @s[tag=!init] at @s run tp @s ~ ~-620 ~
+execute as @s[tag=!init] at @s run tp @s ~ ~70 ~
 execute as @s[tag=!init] at @s run tag @s add init
 
 
@@ -10,8 +10,8 @@ execute positioned as @s[scores={pinhead.state=1}] if entity @p[distance=150..] 
 execute positioned as @s[scores={pinhead.state=2}] if entity @p[distance=130..] anchored eyes facing entity @p eyes positioned ^ ^ ^2 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.08 ~ ~
 execute positioned as @s[scores={pinhead.state=3}] if entity @p[distance=100..] anchored eyes facing entity @p eyes positioned ^ ^ ^2 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.1 ~ ~
 execute positioned as @s[scores={pinhead.state=4}] if entity @p[distance=90..] anchored eyes facing entity @p eyes positioned ^ ^ ^2 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.13 ~ ~
-execute positioned as @s[scores={pinhead.state=5}] if entity @p[distance=50..] anchored eyes facing entity @p eyes positioned ^ ^ ^2 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.25 ~ ~
-execute positioned as @s[scores={pinhead.state=6}] if entity @p[distance=21..] anchored eyes facing entity @p eyes positioned ^ ^ ^2 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.35 ~ ~
+execute positioned as @s[scores={pinhead.state=5}] if entity @p[distance=60..] anchored eyes facing entity @p eyes positioned ^ ^ ^2 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.25 ~ ~
+execute positioned as @s[scores={pinhead.state=6..}] if entity @p[distance=21..] anchored eyes facing entity @p eyes positioned ^ ^ ^2 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.35 ~ ~
 
 
 
@@ -20,10 +20,10 @@ execute positioned as @s[scores={pinhead.state=6}] if entity @p[distance=21..] a
 execute as @s[tag=killmark] at @s run tp @s ~ ~-300 ~
 execute as @s[tag=killmark] at @s run kill @s
 
-
-execute as @s[scores={pinhead.state=6}, tag=looking] at @s run function cryptid:action/pinhead/jump
-
-execute if entity @p[distance=0..20] at @s run function cryptid:action/pinhead/jump
+execute as @s[scores={pinhead.state=3..}, tag=looking] run effect give @p nausea 4 9 true
+execute as @s[scores={pinhead.state=6..}, tag=looking] anchored eyes facing entity @p eyes positioned ^ ^ ^2 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.55 ~ ~
+execute as @s[scores={pinhead.state=4..}] run playsound minecraft:cryptid.ambient.wisp ambient @a[distance=..20] ~ ~ ~ 
+execute if entity @p[distance=0..6] at @s run function cryptid:action/pinhead/jump
 
 
 ##closer
