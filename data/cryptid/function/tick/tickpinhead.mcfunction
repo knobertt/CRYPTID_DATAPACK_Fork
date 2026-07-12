@@ -20,9 +20,10 @@ execute positioned as @s[scores={pinhead.state=6}] if entity @p[distance=21..] a
 execute as @s[tag=killmark] at @s run tp @s ~ ~-300 ~
 execute as @s[tag=killmark] at @s run kill @s
 
-execute as @s[scores={pinhead.state=6}, tag=looking] at @s run function cryptid:action/pinhead/jump 
 
-execute if entity @p[distance=0..20] at @s run function cryptid:action/pinhead/jump 
+execute as @s[scores={pinhead.state=6}, tag=looking] at @s run function cryptid:action/pinhead/jump
+
+execute if entity @p[distance=0..20] at @s run function cryptid:action/pinhead/jump
 
 
 ##closer
