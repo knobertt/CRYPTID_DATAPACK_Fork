@@ -25,7 +25,7 @@
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 3, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "general/breakerant" } } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 7, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/chomper", "fury" : 1100 } } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 2, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/spire", "fury" : 1800 } } ] },
-        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 3, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/pinhead", "fury" : 200 } } ] },
+        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 5, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/pinhead", "fury" : 200 } } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 7, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "sky/lowskyroamer" } } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 4, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/screendash2" } } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 2, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/youngheadpeeper" } } ] },
