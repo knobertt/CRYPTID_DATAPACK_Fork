@@ -22,8 +22,8 @@ execute if entity @s[tag=!dig, tag=hitting] run effect give @e[type=!#cryptid:no
 
 
 ##looking
-execute if score .globaltime cryptid.time matches 1..13000 if entity @s[scores={cryptid.lookcounter=1..}] run tag @s add dig
-
+execute if score .globaltime cryptid.time matches 1..13000 if entity @s[scores={cryptid.lookcounter=1..}] run scoreboard players set @s cryptid.timer 50
+execute if score @s cryptid.timer matches 50 run tag @s add dig
 
 ##despawn
 execute if score @s cryptid.timer matches ..-6000 run function cryptid:events/quietkill
@@ -35,13 +35,13 @@ execute if entity @p[distance=0..10] if score @s cryptid.random matches 2 run ta
 execute if entity @p[distance=0..6] if score @s cryptid.random matches 2..10 run tag @s add dig
 
 ##distance
-execute if entity @p[distance=12..] if score @s cryptid.random matches 2 run tag @s remove dig
+execute if entity @p[distance=12..] if score @s[scores={cryptid.timer=..0}] cryptid.random matches 2 run tag @s remove dig
 
 
 
 ##reset looking
 execute if entity @p[distance=10..] run scoreboard players set @s cryptid.lookcounter 0
-execute if entity @p[distance=10..] run tag @s remove cryptid.currentlylooking
+execute if entity @p[distance=10..] if score @s[scores={cryptid.timer=..0}] cryptid.random matches 1..5 run tag @s remove cryptid.currentlylooking
 
 
 

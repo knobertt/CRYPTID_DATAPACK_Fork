@@ -1,7 +1,6 @@
 tag @s add looking
 
 
-
 ##change state randomly
 
 execute store result score @s cryptid.player.random run random value 1..60
