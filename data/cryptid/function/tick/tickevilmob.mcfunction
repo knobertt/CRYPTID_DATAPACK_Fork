@@ -9,7 +9,7 @@ execute as @e[tag=cryptid.brainparasite,distance=..4] unless predicate cryptid:c
 
 
 
-execute if score @s[tag=!dead] cryptid.player.random matches 1..5 run function cryptid:events/cryptid/sethostile
+execute if score @s[tag=!dead] cryptid.player.random matches 1..4 run function cryptid:events/cryptid/sethostile
 
 execute if score @s[tag=!dead] cryptid.player.random matches 6..10 unless entity @e[tag=cryptid.brainparasite,distance=1.3..3,type=zombified_piglin] run function cryptid:action/hostile/unhostile
 ## some mobs are hard coded to dismount in water, this should reset them to infested

@@ -11,6 +11,9 @@ scoreboard objectives add cryptid.world.furymessage dummy
 ##individual player ID
 scoreboard objectives add cryptid.player.id dummy
 
+## Cryptid Id for linking mobs together as one cryptid
+scoreboard objectives add cryptid.mob.id dummy
+
 ##gamerules
 scoreboard objectives add cryptid.eventhandler dummy
 scoreboard objectives add cryptid.voidambiencetimer dummy

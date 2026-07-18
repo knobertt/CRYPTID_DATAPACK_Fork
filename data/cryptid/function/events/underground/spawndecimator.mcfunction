@@ -60,10 +60,11 @@ execute as @e[type=vindicator, tag=cryptid.deci3, tag=!cryptid.markerapplied] at
 
 ##thug occultguy
 
-execute if score @s cryptid.player.random matches 70..95 run summon zombified_piglin ~ ~ ~ {IsImmuneToZombification:1,CustomName:'[{"text":"Occult Crimson"}]',PersistenceRequired:1b,Silent:1b,Tags:["cryptid","cryptid.occult"],ArmorItems:[{},{},{},{id:potion,components:{"minecraft:custom_model_data":1339},count:1}],ArmorDropChances:[0f,0f,0f,0f],attributes:[{id:"generic.armor",base:19f},{id:"generic.max_health",base:60f},{id:"generic.gravity",base:0.1f},{id:"generic.follow_range",base:32f},{id:"generic.water_movement_efficiency",base:0f},{id:"piglin.spawn_reinforcements",base:10f}]}
+execute if score @s cryptid.player.random matches 70..95 run summon zombified_piglin ~ ~ ~ {IsImmuneToZombification:1,IsBaby:true,CustomName:'[{"text":"Occult Crimson"}]',PersistenceRequired:1b,Silent:1b,Tags:["cryptid","cryptid.occult"],ArmorItems:[{},{},{},{id:potion,components:{"minecraft:custom_model_data":1339},count:1}],ArmorDropChances:[0f,0f,0f,0f],attributes:[{id:"generic.armor",base:19f},{id:"generic.max_health",base:60f},{id:"generic.gravity",base:0.1f},{id:"generic.follow_range",base:32f},{id:"generic.water_movement_efficiency",base:0f},{id:"piglin.spawn_reinforcements",base:10f}]}
 
 
-execute as @e[tag=cryptid.occult, type=zombified_piglin] at @s run attribute @s minecraft:generic.step_height base set 1
+execute as @e[tag=cryptid.occult, type=zombified_piglin] at @s run attribute @s minecraft:generic.scale base set 2.5
+execute as @e[tag=cryptid.occult, type=zombified_piglin] at @s run attribute @s minecraft:generic.step_height base set 3
 execute as @e[tag=cryptid.occult, type=zombified_piglin] at @s run attribute @s minecraft:generic.knockback_resistance base set 20
 execute as @e[tag=cryptid.occult, type=zombified_piglin] at @s run attribute @s minecraft:generic.follow_range base set 10000000
 execute as @e[tag=cryptid.occult, type=zombified_piglin] at @s run scoreboard players set @s cryptid.mob.class 3
@@ -71,8 +72,6 @@ execute as @e[tag=cryptid.occult, type=zombified_piglin] at @s run scoreboard pl
 
 
 effect give @e[tag=cryptid.occult, type=zombified_piglin] minecraft:invisibility infinite 3 true
-effect give @e[tag=cryptid.occult, type=zombified_piglin] minecraft:strength infinite 1 true
-effect give @e[tag=cryptid.occult, type=zombified_piglin] minecraft:resistance infinite 10 true
 
 
 

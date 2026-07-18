@@ -27,18 +27,20 @@ execute if entity @a[scores={cryptid.walking=1..}, distance=0..8] run damage @s 
 
 execute if score @s cryptid.player.random matches 1 run damage @s 0 minecraft:mob_attack by @e[sort=random, distance=1..,limit=1]
 
-execute if score @s cryptid.player.random matches 12..14 run function cryptid:events/quietkill
+execute if score @s cryptid.player.random matches 12..14 unless entity @p[distance=..30] run function cryptid:events/quietkill
 
 execute if score @s cryptid.player.random matches 120..290 run function cryptid:action/occult/burst
 
+#tug mad so poisons with exploding
+execute if score @s cryptid.player.random matches 30..60 as @n[type=#cryptid:infestable,distance=..15,tag=!cryptid] run function cryptid:action/general/fireworksdeath
 
 
-damage @p[distance=0..2] 0.2 minecraft:sonic_boom
+execute if score @s cryptid.player.random matches 10000..20000 as @e[type=!player, distance=1..15,tag=!cryptid] at @s run tp @s ~ ~ ~ facing entity @e[type=zombified_piglin, tag=cryptid.occult,limit=1, sort=nearest]
 
-execute as @e[type=!player, distance=1..9,tag=!cryptid] at @s run tp @s ~ ~ ~ facing entity @e[type=zombified_piglin, tag=cryptid.occult,limit=1, sort=nearest]
 
-execute if entity @s[tag=cryptid.lookingoccult] run effect give @s speed 1 2 true
-
+#effects
+execute if entity @p[distance=20..] run effect give @s resistance 1 4
+execute if entity @s[tag=cryptid.lookingoccult] run effect give @s slowness 1 2 true
 effect give @s minecraft:invisibility infinite 255 true
 
 execute if entity @p[distance=0..40] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 nether_wart_block replace #minecraft:mineable/shovel

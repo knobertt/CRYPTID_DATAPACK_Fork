@@ -196,13 +196,31 @@ execute if score @s cryptid.random matches 1 run title @s times 0 3t 0
 execute store result score @s cryptid.random run random value 1..200
 execute if score @s cryptid.random matches 1 run tag @s remove cryptid.mouthtarget
 
+## This block is really wird why do it repeate also the @r selector means it selects a random of it type not specific looking at target so idk
 
-######################looking spider and looking cryptyids
+
+######################Tracks the look angle for 
+
+execute as @e[tag=cryptid.lookcount,limit=1,sort=random,distance=..95] run tag @s add activelookcheck
+
+##testn
+
+execute anchored eyes facing entity @n[type=armor_stand,tag=activelookcheck,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..1.2] run execute as @n[type=armor_stand,tag=activelookcheck,distance=0..295] at @s run function cryptid:tick/player/lookcounter
+execute anchored eyes facing entity @n[type=armor_stand,tag=activelookcheck,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=1.2..] run execute as @n[type=armor_stand,tag=activelookcheck,distance=0..295] at @s run tag @s remove cryptid.currentlylooking
 
 
-execute anchored eyes facing entity @e[type=armor_stand,tag=cryptid.lookcount,sort=random,distance=0..95] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..1.5] run execute as @e[type=armor_stand,tag=cryptid.lookcount,limit=1,sort=random,distance=0..295] at @s run function cryptid:tick/player/lookcounter
+#execute anchored eyes facing entity @n[tag=activecheck,distance=0..95] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..1.5] as @n[tag=activelookcheck] at @s run function cryptid:tick/player/lookcounter
+#execute anchored eyes facing entity @e[type=armor_stand,tag=cryptid.lookcount,sort=random,distance=0..95] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=1.5..] as @s at @s run tag @s remove cryptid.currentlylooking
 
-execute anchored eyes facing entity @e[type=armor_stand,tag=cryptid.lookcount,sort=random,distance=0..95] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=1.5..] run execute as @e[type=armor_stand,tag=cryptid.lookcount,limit=1,sort=random,distance=0..295] at @s run tag @s remove cryptid.currentlylooking
+#old
+#execute anchored eyes facing entity @e[type=armor_stand,tag=cryptid.lookcount,sort=random,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..1.5] run execute as @n[type=armor_stand,tag=cryptid.lookcount,distance=0..295] at @s run function cryptid:tick/player/lookcounter
+#execute anchored eyes facing entity @e[type=armor_stand,tag=cryptid.lookcount,sort=random,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=1.5..] run execute as @n[type=armor_stand,tag=cryptid.lookcount,distance=0..295] at @s run tag @s remove cryptid.currentlylooking
+
+
+execute as @e[tag=activelookcheck] run tag @s remove activelookcheck
+
+##checks for specific cryptids in a view cone
+function cryptid:tick/player/lookcheck
 
 execute anchored eyes facing entity @e[type=zombie,tag=cryptid.lookcount,sort=random,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..1.5] run execute as @e[type=zombie,tag=cryptid.lookcount,limit=1,sort=random,distance=0..295] at @s run function cryptid:tick/player/lookcounter
 
@@ -215,6 +233,8 @@ execute anchored eyes facing entity @e[type=zombie,tag=cryptid.lookcount,sort=ra
 ##other looking
 
 execute anchored eyes facing entity @e[type=armor_stand,tag=cryptid.spire,limit=1,sort=random,distance=0..95] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.7] run function cryptid:action/spire/view
+
+##
 
 ##pinheadcheck
 execute anchored eyes facing entity @e[type=armor_stand,tag=cryptid.pinhead,limit=1,sort=random,distance=0..205] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.9] run execute as @e[type=armor_stand,tag=cryptid.pinhead] at @s run function cryptid:action/pinhead/add
