@@ -1,6 +1,7 @@
 scoreboard objectives add cryptid.player.sleeptime minecraft.custom:minecraft.sleep_in_bed
 scoreboard objectives add cryptid.player.crouch minecraft.custom:minecraft.sneak_time
 scoreboard objectives add cryptid.player.damage minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add cryptid.player.titlecooldown dummy
 scoreboard objectives add cryptid.player.maxharmony dummy
 scoreboard objectives add cryptid.player.minharmony dummy
 scoreboard objectives add cryptid.chomptime dummy

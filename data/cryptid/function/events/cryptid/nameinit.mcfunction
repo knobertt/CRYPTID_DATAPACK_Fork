@@ -41,9 +41,9 @@ execute if score @s cryptid.player.random matches 39 run data merge entity @s {C
 execute if score @s cryptid.player.random matches 40 run data merge entity @s {CustomName:'{"text":"Freedom"}',CustomNameVisible:1b}
 execute if score @s cryptid.player.random matches 41 run data merge entity @s {CustomName:'{"text":"Navoj"}',CustomNameVisible:1b}
 
-execute if score @s cryptid.player.random matches 1..80 run tag @s add cryptid.cursed
-execute if score @s cryptid.player.random matches 1..80 run tag @s add cryptid
-execute if score @s cryptid.player.random matches 1..80 run function cryptid:action/general/spawntickmarker {"name":"tickcursed"}
+execute if score @s cryptid.player.random matches 1..90 run tag @s add cryptid.cursed
+execute if score @s cryptid.player.random matches 1..90 run tag @s add cryptid
+execute if score @s cryptid.player.random matches 1..90 run function cryptid:action/general/spawntickmarker {"name":"tickcursed"}
 
 
 execute if score .global cryptid.day matches 8.. if entity @s[tag=!cryptid,type=!marker,type=!armor_stand,type=!zombified_piglin,type=!#cryptid:nonliving] run function cryptid:action/hostile/infestinit

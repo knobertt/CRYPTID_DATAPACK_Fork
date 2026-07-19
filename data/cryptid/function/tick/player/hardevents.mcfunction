@@ -1,5 +1,8 @@
 
 ##ancient evil
+scoreboard players set @s cryptid.player.titlecooldown 40
+
+
 execute if score .global cryptid.day matches 1 run tellraw @a {"text":"An ancient evil has awakened in the depths of the world","color":"dark_red"}
 
 execute if score .global cryptid.day matches 2 run function cryptid:events/cryptid/fireworks
