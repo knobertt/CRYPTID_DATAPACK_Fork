@@ -2,11 +2,11 @@
 execute store result score @s cryptid.player.random run random value 1..15
 
 
-execute if score @s cryptid.player.random matches 1..5 run execute anchored eyes run summon minecraft:armor_stand ^4 ^-4 ^3.5 {CustomName:'[{"text":"Jester"}]',Invisible:1b, Tags:["cryptid","cryptid.sidescreen"]}
+execute if score @s cryptid.player.random matches 1..5 run execute anchored eyes run summon minecraft:armor_stand ^4 ^-4 ^4.5 {CustomName:'[{"text":"Jester"}]',Invisible:1b, Tags:["cryptid","cryptid.sidescreen"]}
 
-execute if score @s cryptid.player.random matches 5..10 run execute anchored eyes run summon minecraft:armor_stand ^-3 ^-3 ^4.1 {CustomName:'[{"text":"Jester"}]',Invisible:1b, Tags:["cryptid","cryptid.sidescreen"]}
+execute if score @s cryptid.player.random matches 5..10 run execute anchored eyes run summon minecraft:armor_stand ^-3 ^-3 ^5.1 {CustomName:'[{"text":"Jester"}]',Invisible:1b, Tags:["cryptid","cryptid.sidescreen"]}
 
-execute if score @s cryptid.player.random matches 10..15 run execute anchored eyes run summon minecraft:armor_stand ^2 ^2.6 ^3.1 {CustomName:'[{"text":"Jester"}]',Invisible:1b, Tags:["cryptid","cryptid.sidescreen"]}
+execute if score @s cryptid.player.random matches 10..15 run execute anchored eyes run summon minecraft:armor_stand ^2 ^2.6 ^4.1 {CustomName:'[{"text":"Jester"}]',Invisible:1b, Tags:["cryptid","cryptid.sidescreen"]}
 
 
 execute if score @s cryptid.player.random matches 1 run item replace entity @e[type=minecraft:armor_stand, sort=nearest, limit=5, tag=cryptid.sidescreen] armor.head with potion[minecraft:custom_model_data=1315]

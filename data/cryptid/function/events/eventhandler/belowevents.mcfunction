@@ -14,7 +14,7 @@ execute if score @s cryptid.event.random matches 11..29 run function cryptid:eve
 # (Intentionally left blank as no events in this batch met the 1-3 range requirement)
 
 ## Major Overlapping Events (>15 Range)
-execute if score @s cryptid.event.random matches 1..25 run function cryptid:events/cryptid/youngheadpeeper
+execute if score @s cryptid.event.random matches 1..25 run function cryptid:events/cryptid/headpeeper
 execute if score @s cryptid.event.random matches 26..45 run function cryptid:events/general/spawnheadpeeper
 execute if score @s cryptid.event.random matches 41..65 run function cryptid:events/cryptid/whisper1
 execute if score @s cryptid.event.random matches 81..90 run function cryptid:events/cryptid/tortured

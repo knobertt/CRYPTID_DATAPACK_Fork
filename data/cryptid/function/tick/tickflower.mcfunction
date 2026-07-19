@@ -9,7 +9,8 @@ execute if entity @s[tag=!init] run tag @s add init
 
 execute if score @s cryptid.player.random matches 4..6 run function cryptid:events/node/block
 execute if score @s cryptid.player.random matches 20..22 run function cryptid:events/action/spawntree
-execute if score @s cryptid.player.random matches 20..22 run function cryptid:events/quietkill
+execute if score @s cryptid.player.random matches 22..24 run function cryptid:action/hostile/advancecorrupt
+execute if score @s cryptid.player.random matches 20..24 run function cryptid:events/quietkill
 
 execute if score @s cryptid.player.random matches 20..210 run execute as @e[tag=cryptid.flower, type=armor_stand, distance=0..30] at @s run function cryptid:events/quietkill
 

@@ -1,0 +1,15 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 2, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/flicker5" } } ] },
+        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 10, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/radiodead" } } ] },
+        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 5, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/screencorrupt" } } ] },
+        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 3, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/glitchtool" } } ] },
+        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 1, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/setnight" } } ] },
+        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 6, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/uncanny2" } } ] }
+      ]
+    }
+  ]
+}

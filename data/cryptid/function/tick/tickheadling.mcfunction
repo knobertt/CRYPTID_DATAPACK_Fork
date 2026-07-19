@@ -26,9 +26,10 @@ execute if score .globaltime cryptid.time matches 1..13000 if entity @s[scores={
 execute if score @s cryptid.timer matches 50 run tag @s add dig
 
 ##despawn
-execute if score @s cryptid.timer matches ..-6000 run function cryptid:events/quietkill
-execute if entity @p[distance=150..] run function cryptid:events/quietkill
+execute at @s[tag=!meatamorphosis] if entity @p[distance=150..] run function cryptid:events/quietkill
 
+execute if score @s[tag=!meatamorphosis] cryptid.timer matches ..-4000 if score @s cryptid.random matches 35 run function cryptid:events/quietkill
+execute if score @s[tag=!meatamorphosis] cryptid.timer matches ..-4000 if score @s cryptid.random matches 36.. run tag @s add meatamorphosis
 
 
 execute if entity @p[distance=0..10] if score @s cryptid.random matches 2 run tag @s add dig
