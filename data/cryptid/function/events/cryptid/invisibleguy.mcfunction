@@ -1,4 +1,4 @@
-summon minecraft:vindicator ~ 400 ~ {Invisible:1,CustomName:'[{"text":"010101001010101010101110"}]', Tags:["cryptid","cryptid.invisguy"], Silent:1, Invulnerable:1}
+summon minecraft:vindicator ~ 400 ~ {Invisible:1,CustomName:'[{"text":"010101001010101010101110"}]', Tags:["cryptid","cryptid.invisguy"], Silent:1b, Invulnerable:1}
 scoreboard players set @a[distance=..25] cryptid.player.titlecooldown 40
 title @p actionbar [{"text":"Are you here to help us?","color":"dark_red"}]
 
