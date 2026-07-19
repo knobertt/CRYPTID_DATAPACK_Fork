@@ -1,5 +1,5 @@
 
-scoreboard players add @s cryptid.crawlerspawn 1
+execute unless entity @n[tag=cryptid.crawler,distance=..250] run scoreboard players add @s cryptid.crawlerspawn 1
 
 playsound minecraft:cryptid.earth.ambient ambient @s
 

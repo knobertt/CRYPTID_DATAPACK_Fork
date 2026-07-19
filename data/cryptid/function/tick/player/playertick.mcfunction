@@ -113,13 +113,16 @@ execute as @s[tag=!cryptid.radiostarted] at @s run execute if items entity @s we
 execute as @s[tag=!cryptid.radiostarted] at @s run execute if items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass.status:2b}] run playsound minecraft:cryptid.radiolong2 ambient @s ~ ~ ~ 1000 1 1
 execute as @s[tag=!cryptid.radiostarted] at @s run execute if items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass.status:3b}] run playsound minecraft:cryptid.radiolong3 ambient @s ~ ~ ~ 1000 1 1
 
-execute as @s[tag=!cryptid.radiostarted] at @s run execute if items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run scoreboard players set @s cryptid.player.radioloop 100
+execute as @s[tag=!cryptid.radiostarted] at @s run execute if items entity @s weapon.offhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run playsound minecraft:cryptid.radiolong2 ambient @s ~ ~ ~ 1000 1 1
+
+
+execute as @s[tag=!cryptid.radiostarted] at @s run execute if items entity @s weapon.* sugar[minecraft:custom_data~{cryptid.compass:1b}] run scoreboard players set @s cryptid.player.radioloop 100
 
 
 ##shutting off sounds
-execute as @s at @s run execute unless items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run function cryptid:events/radiosoundoff
-execute as @s at @s run execute if items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run tag @s add cryptid.radiostarted
-execute as @s at @s run execute unless items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run tag @s remove cryptid.radiostarted
+execute as @s at @s run execute unless items entity @s weapon.* sugar[minecraft:custom_data~{cryptid.compass:1b}] run function cryptid:events/radiosoundoff
+execute as @s at @s run execute if items entity @s weapon.* sugar[minecraft:custom_data~{cryptid.compass:1b}] run tag @s add cryptid.radiostarted
+execute as @s at @s run execute unless items entity @s weapon.* sugar[minecraft:custom_data~{cryptid.compass:1b}] run tag @s remove cryptid.radiostarted
 
 
 

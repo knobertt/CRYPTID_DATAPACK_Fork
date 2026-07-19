@@ -163,7 +163,7 @@ execute unless score @s cryptid.player.titlecooldown matches -2147483648..214748
 
 execute unless score @s cryptid.player.titlecooldown matches -2147483648..2147483647 if items entity @s[scores={cryptid.sprinting=0,cryptid.walking=0,cryptid.inair=0}] weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass.status:3b}] run title @s[tag=!deadradio] actionbar ["",{"text":"[RADIO]","color":"red"},": <",{"text":"Distance To Heart","color":"dark_red"},">: ",{"text":"{","color":"#996633"},{"score":{"objective":"cryptid.player.heart.distance","name":"@s"}},{"text":"}, ","color":"#996633"},"<",{"text":"Event Chance","color":"dark_red"},">: ",{"text":"{","color":"#996633"},{"text":"1 in ","color":"white"},{"score":{"objective":"cryptid.player.event","name":"@s"}},{"text":"}, ","color":"#996633"},"<",{"text":"Heart Capsules","color":"dark_red"},">: ",{"text":"{","color":"#996633"},{"score":{"objective":"cryptid.maxlives","name":"@s"}},{"text":"}","color":"#996633"}]
 
-
+execute unless score @s cryptid.player.titlecooldown matches -2147483648..2147483647 if items entity @s weapon.offhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run function cryptid:tick/player/harmonycheck
 
 ##disc1
 execute as @s[scores={cryptid.click=1..}] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.tape:1b}] run playsound cryptid.disc1 ambient @a[distance=0..30] ~ ~ ~ 1200 1 1
