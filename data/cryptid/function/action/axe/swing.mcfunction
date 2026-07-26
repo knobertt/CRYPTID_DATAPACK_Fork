@@ -4,3 +4,4 @@ damage @s 3 minecraft:out_of_world by @s
 
 execute anchored eyes as @e[type=!#cryptid:nonliving, distance=0.1..3.2] at @s run function cryptid:action/axe/kb
 execute anchored eyes as @e[type=!#cryptid:nonliving, distance=0.1..3.2] at @s run effect give @p minecraft:instant_health 1 0
+execute anchored eyes as @e[type=armor_stand,tag=cryptid.eldertree, distance=0.1..3.2] run tag @s add hurt

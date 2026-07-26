@@ -13,7 +13,7 @@ scoreboard players remove @p[distance=0..14] cryptid.player.harmony 3
 
 execute store result score @s cryptid.player.random run random value 1..120000
 
-execute if score @s cryptid.player.random matches 5..100 run function cryptid:events/quietkill
+execute if score @s cryptid.player.random matches 5..90 run function cryptid:events/quietkill
 
 execute if score @s cryptid.player.random matches 5..10 run function cryptid:events/cryptid/flicker5
 execute if score @s cryptid.player.random matches 10..20 run spreadplayers ~ ~ 5 10 false @s
