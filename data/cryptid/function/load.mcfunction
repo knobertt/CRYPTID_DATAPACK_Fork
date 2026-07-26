@@ -121,7 +121,6 @@ scoreboard objectives add cryptid.ritual.focicount dummy
 scoreboard objectives add cryptid.ritualrangecap dummy
 scoreboard objectives add cryptid.ritual.probability dummy
 scoreboard objectives add cryptid.ritual.turns dummy
-execute as @r run function cryptid:rituals/initial/orificecraving
 scoreboard objectives add cryptid.ritual.sacrificecounter dummy
 scoreboard objectives add cryptid.athame.cooldown dummy
 
@@ -239,6 +238,9 @@ execute if score .global cryptid.worldtimer matches ..12000 run scoreboard playe
 
 scoreboard players set -1 cryptid.roty -1
 
+##fix travis
+#data modify storage cryptid:sacrifice craving.type set value "5undead"
+function cryptid:rituals/initial/orificecraving
 
 ## Long tick loop 1 minute
 function cryptid:ticklong

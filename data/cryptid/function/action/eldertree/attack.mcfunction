@@ -1,4 +1,4 @@
-say attack
+playsound minecraft:entity.elder_guardian.hurt ambient @a[distance=..30] ~ ~ ~ 2 0.6
 tag @s remove groundatk
 tag @s remove summonatk
 execute store result score @s cryptid.player.random run random value 1..2

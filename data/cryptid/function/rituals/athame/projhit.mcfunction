@@ -5,7 +5,7 @@ playsound minecraft:cryptid.sword.hit ambient @a
 
 
 ## spawn chains
-execute as @s[tag=!chained] run function cryptid:action/chaindebuff/spawnchain
+execute as @s[tag=!chained,type=!player] run function cryptid:action/chaindebuff/spawnchain
 
 execute on passengers run scoreboard players operation @s[tag=cryptid.chainer] cryptid.player.id = @n[tag=cryptid.athameproj,type=item_display] cryptid.player.id 
 
