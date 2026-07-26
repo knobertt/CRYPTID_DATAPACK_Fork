@@ -1,4 +1,5 @@
 
+execute unless entity @n[tag=cryptid.crawler,distance=..250] run scoreboard players add @s cryptid.crawlerspawn 1
 
 playsound minecraft:cryptid.earth.ambient ambient @s
 
@@ -15,7 +16,6 @@ execute if score @s cryptid.crawlerspawn matches 3 run playsound minecraft:crypt
 
 
 ##end
-scoreboard players add @s cryptid.crawlerspawn 1
 execute if score @s cryptid.crawlerspawn matches ..-1 run scoreboard players set @s cryptid.crawlerspawn 0
 execute if score @s cryptid.crawlerspawn matches 3.. run scoreboard players set @s cryptid.crawlerspawn 0
 

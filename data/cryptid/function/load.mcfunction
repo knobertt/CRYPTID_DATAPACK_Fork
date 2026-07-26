@@ -1,6 +1,7 @@
 scoreboard objectives add cryptid.player.sleeptime minecraft.custom:minecraft.sleep_in_bed
 scoreboard objectives add cryptid.player.crouch minecraft.custom:minecraft.sneak_time
 scoreboard objectives add cryptid.player.damage minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add cryptid.player.titlecooldown dummy
 scoreboard objectives add cryptid.player.maxharmony dummy
 scoreboard objectives add cryptid.player.minharmony dummy
 scoreboard objectives add cryptid.chomptime dummy
@@ -47,6 +48,7 @@ scoreboard objectives add cryptid.voidtimer dummy
 gamerule logAdminCommands false
 
 scoreboard objectives add cryptid.timer dummy
+scoreboard objectives add cryptid.mob.cooldown dummy
 
 scoreboard objectives add cryptid.damagedealt minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add cryptid.damagedealt2 minecraft.custom:minecraft.damage_dealt
@@ -61,6 +63,7 @@ scoreboard objectives add cryptid.crawlerspawn dummy
 scoreboard objectives add cryptid.wavespawn dummy
 scoreboard objectives add cryptid.anitimer dummy
 scoreboard objectives add cryptid.pyramidsteal dummy
+scoreboard objectives add cryptid.tree.health dummy
 scoreboard objectives add cryptid.spawnattempts dummy
 scoreboard players set 24000 cryptid.anitimer 24000
 scoreboard players set 80 cryptid.anitimer 80

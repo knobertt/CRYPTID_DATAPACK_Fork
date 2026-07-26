@@ -118,8 +118,11 @@
                 "minecraft:lore": [
                   "[\"\",{\"text\":\"Smells like copper\",\"italic\":false,\"color\":\"dark_red\"}]"
                 ],
-                "minecraft:custom_data": "{cryptid.shotgun:1,cryptid.shot:1,cryptid.item:1}",
-                "minecraft:custom_model_data": 1300
+                "minecraft:custom_data": "{cryptid.shotgun:1b,cryptid.maxammo:1,cryptid.item:1b}",
+                "minecraft:custom_model_data": 1300,
+                "minecraft:unbreakable": {
+                  "show_in_tooltip": false
+                }
               }
             }
           ]

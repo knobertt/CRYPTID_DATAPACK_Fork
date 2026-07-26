@@ -1,5 +1,5 @@
 execute as @s store result score @s cryptid.random run random value 1..15
-
+scoreboard players set @a[distance=..25] cryptid.player.titlecooldown 40
 
 
 execute if score @s cryptid.random matches 1 run title @a[distance=0..25] actionbar {"text":"Please help me..","color":"dark_red"}

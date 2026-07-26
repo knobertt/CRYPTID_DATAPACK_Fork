@@ -27,12 +27,13 @@ execute if entity @p[distance=0..25] run scoreboard players set @s cryptid.lookc
 execute rotated as @s if entity @s[tag=dig] at @s if block ~ ~5 ~ air run tp @s ~ ~-1 ~
 execute rotated as @s if entity @s[tag=dig] at @s if block ~ ~5 ~ air run execute positioned ~ ~3 ~ positioned over motion_blocking_no_leaves run particle block{block_state:{Name:red_concrete}} ~ ~-0.2 ~ 1 1 1 0 75
 execute rotated as @s if entity @s[tag=dig] at @s if block ~ ~5 ~ air run execute positioned ~ ~3 ~ positioned over motion_blocking_no_leaves run playsound block.stone.break ambient @a[distance=..20] ~ ~ ~ 4 0.6
+execute rotated as @s if entity @s[tag=dig] at @s unless block ~ ~ ~ air run tag @s remove breakground
 
 ##undig
 execute rotated as @s if entity @s[tag=!dig] at @s unless block ~ ~-15 ~ air run tp @s ~ ~1 ~
 execute rotated as @s if entity @s[tag=!dig] at @s unless block ~ ~-15 ~ air run execute positioned ~ ~3 ~ positioned over motion_blocking_no_leaves run particle block{block_state:{Name:red_concrete}} ~ ~-0.2 ~ 1 1 1 0 75
 execute rotated as @s if entity @s[tag=!dig] at @s unless block ~ ~-15 ~ air run execute positioned ~ ~3 ~ positioned over motion_blocking_no_leaves run playsound block.stone.break ambient @a[distance=..20] ~ ~ ~ 4 0.6
-
+execute rotated as @s if entity @s[tag=!dig,tag=!breakground] at @s if block ~ ~ ~ air run execute positioned ~ ~3 ~ positioned over motion_blocking_no_leaves run function cryptid:action/headpeeper/emerge
 
 
 ##reset looking

@@ -1,8 +1,13 @@
-
+##Generic
 execute as @e[tag=cryptid.lookcount,limit=1,sort=random,distance=..95] run tag @s add activelookcheck
+execute anchored eyes facing entity @n[type=armor_stand,tag=activelookcheck,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..1.2] run execute as @n[type=armor_stand,tag=activelookcheck,distance=0..295] at @s run function cryptid:tick/player/lookcounter
+execute anchored eyes facing entity @n[type=armor_stand,tag=activelookcheck,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=1.2..] run execute as @n[type=armor_stand,tag=activelookcheck,distance=0..295] at @s run tag @s remove cryptid.currentlylooking
 
-
+execute anchored eyes facing entity @e[type=zombie,tag=activelookcheck,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..1.5] run execute as @e[type=zombie,tag=activelookcheck,distance=0..295] at @s run function cryptid:tick/player/lookcounter
+execute anchored eyes facing entity @e[type=zombie,tag=activelookcheck,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=1.5..] run execute as @e[type=zombie,tag=activelookcheck,distance=0..295] at @s run tag @s remove cryptid.currentlylooking
 execute as @e[tag=cryptid.lookcount,tag=activelookcheck] run tag @s remove activelookcheck
+
+
 
 ## Head peeper
 #headling *independant curentlylooking tag

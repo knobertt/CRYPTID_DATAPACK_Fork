@@ -113,23 +113,21 @@ execute as @s[tag=!cryptid.radiostarted] at @s run execute if items entity @s we
 execute as @s[tag=!cryptid.radiostarted] at @s run execute if items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass.status:2b}] run playsound minecraft:cryptid.radiolong2 ambient @s ~ ~ ~ 1000 1 1
 execute as @s[tag=!cryptid.radiostarted] at @s run execute if items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass.status:3b}] run playsound minecraft:cryptid.radiolong3 ambient @s ~ ~ ~ 1000 1 1
 
-execute as @s[tag=!cryptid.radiostarted] at @s run execute if items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run scoreboard players set @s cryptid.player.radioloop 100
+execute as @s[tag=!cryptid.radiostarted] at @s run execute if items entity @s weapon.offhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run playsound minecraft:cryptid.radiolong2 ambient @s ~ ~ ~ 1000 1 1
+
+
+execute as @s[tag=!cryptid.radiostarted] at @s run execute if items entity @s weapon.* sugar[minecraft:custom_data~{cryptid.compass:1b}] run scoreboard players set @s cryptid.player.radioloop 100
 
 
 ##shutting off sounds
-execute as @s at @s run execute unless items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run function cryptid:events/radiosoundoff
-execute as @s at @s run execute if items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run tag @s add cryptid.radiostarted
-execute as @s at @s run execute unless items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run tag @s remove cryptid.radiostarted
+execute as @s at @s run execute unless items entity @s weapon.* sugar[minecraft:custom_data~{cryptid.compass:1b}] run function cryptid:events/radiosoundoff
+execute as @s at @s run execute if items entity @s weapon.* sugar[minecraft:custom_data~{cryptid.compass:1b}] run tag @s add cryptid.radiostarted
+execute as @s at @s run execute unless items entity @s weapon.* sugar[minecraft:custom_data~{cryptid.compass:1b}] run tag @s remove cryptid.radiostarted
 
 
 
 
 ##############shotgunhandler
-
-##shotgunround
-#execute as @e[distance=0..3, type=firework_rocket] at @s if entity @s[type=firework_rocket, nbt={FireworksItem:{components:{"minecraft:custom_data":{cryptid.shotgunarrow:1b}}}}] at @s run function cryptid:action/shotgun/shotgunhandler
-#execute as @e[distance=0..3, type=firework_rocket] at @s if entity @s[type=firework_rocket, nbt={FireworksItem:{components:{"minecraft:custom_data":{cryptid.shotgunarrow:2b}}}}] at @s run function cryptid:action/shotgun/shotgunhandler
-#execute as @e[distance=0..3, type=firework_rocket] at @s if entity @s[type=firework_rocket, nbt={FireworksItem:{components:{"minecraft:custom_data":{cryptid.shotgunarrow:3b}}}}] at @s run function cryptid:action/shotgun/shotgunhandler
 
 
 scoreboard players set @s cryptid.range 10
@@ -201,36 +199,11 @@ execute if score @s cryptid.random matches 1 run tag @s remove cryptid.mouthtarg
 
 ######################Tracks the look angle for 
 
-execute as @e[tag=cryptid.lookcount,limit=1,sort=random,distance=..95] run tag @s add activelookcheck
-
-##testn
-
-execute anchored eyes facing entity @n[type=armor_stand,tag=activelookcheck,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..1.2] run execute as @n[type=armor_stand,tag=activelookcheck,distance=0..295] at @s run function cryptid:tick/player/lookcounter
-execute anchored eyes facing entity @n[type=armor_stand,tag=activelookcheck,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=1.2..] run execute as @n[type=armor_stand,tag=activelookcheck,distance=0..295] at @s run tag @s remove cryptid.currentlylooking
-
-
-#execute anchored eyes facing entity @n[tag=activecheck,distance=0..95] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..1.5] as @n[tag=activelookcheck] at @s run function cryptid:tick/player/lookcounter
-#execute anchored eyes facing entity @e[type=armor_stand,tag=cryptid.lookcount,sort=random,distance=0..95] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=1.5..] as @s at @s run tag @s remove cryptid.currentlylooking
-
-#old
-#execute anchored eyes facing entity @e[type=armor_stand,tag=cryptid.lookcount,sort=random,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..1.5] run execute as @n[type=armor_stand,tag=cryptid.lookcount,distance=0..295] at @s run function cryptid:tick/player/lookcounter
-#execute anchored eyes facing entity @e[type=armor_stand,tag=cryptid.lookcount,sort=random,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=1.5..] run execute as @n[type=armor_stand,tag=cryptid.lookcount,distance=0..295] at @s run tag @s remove cryptid.currentlylooking
-
-
-execute as @e[tag=activelookcheck] run tag @s remove activelookcheck
-
-##checks for specific cryptids in a view cone
+##checks for specific cryptids in a view cone (multiple eneities supporded at once)
 function cryptid:tick/player/lookcheck
 
-execute anchored eyes facing entity @e[type=zombie,tag=cryptid.lookcount,sort=random,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..1.5] run execute as @e[type=zombie,tag=cryptid.lookcount,limit=1,sort=random,distance=0..295] at @s run function cryptid:tick/player/lookcounter
 
-execute anchored eyes facing entity @e[type=zombie,tag=cryptid.lookcount,sort=random,distance=0..295] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=1.5..] run execute as @e[type=zombie,tag=cryptid.lookcount,limit=1,sort=random,distance=0..295] at @s run tag @s remove cryptid.currentlylooking
-
-
-
-
-
-##other looking
+#### #other looking (not tested for multiple at once)
 
 execute anchored eyes facing entity @e[type=armor_stand,tag=cryptid.spire,limit=1,sort=random,distance=0..95] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.7] run function cryptid:action/spire/view
 

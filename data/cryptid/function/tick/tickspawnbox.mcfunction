@@ -1,4 +1,5 @@
 execute as @s[tag=!init] run scoreboard players set @s cryptid.timer 2000
+execute as @s[tag=!init] run scoreboard players set @s cryptid.player.titlecooldown 4000
 execute as @s[tag=!init] run playsound minecraft:cryptid.jelly.cloud ambient @a ~ ~ ~ 0.16 0.1
 execute as @s[tag=!init] run tag @s add init
 

@@ -70,7 +70,8 @@ execute as @s[scores={cryptid.player.harmony=-7000..5000}] at @s run function cr
 
 execute as @s[scores={cryptid.player.harmony=-30000..-7000}] at @s run function cryptid:events/eventhandler/macroroll {"eventgroup":"high"}
 
-  execute if score @s cryptid.event.random matches 1..90 as @s[scores={cryptid.player.harmony=-30000..-7000}] at @s run function cryptid:events/eventhandler/macroroll {"eventgroup":"generalmood"}
+  execute if score @s cryptid.event.random matches 40..90 as @s[scores={cryptid.player.harmony=-30000..-7000}] at @s run function cryptid:events/eventhandler/macroroll {"eventgroup":"generalmood"}
+  execute if score @s cryptid.event.random matches 1..50 as @s[scores={cryptid.player.harmony=-30000..-7000}] at @s run function cryptid:events/eventhandler/macroroll {"eventgroup":"highmood"}
 
 
 
