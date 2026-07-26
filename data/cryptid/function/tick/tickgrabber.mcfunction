@@ -16,9 +16,9 @@ execute if score @s cryptid.player.random matches 15..20 at @s run function cryp
 
 
 
-execute if block ~ ~-1 ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~-1 ~
-execute if block ~ ~-1 ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~-1 ~
-execute if block ~ ~-1 ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~-1 ~
+execute if block ~ ~-1 ~ #cryptid:nonsolid run tp @s ~ ~-1 ~
+execute if block ~ ~-1 ~ #cryptid:nonsolid run tp @s ~ ~-1 ~
+execute if block ~ ~-1 ~ #cryptid:nonsolid run tp @s ~ ~-1 ~
 execute if score @s cryptid.player.random matches 4.. at @s run tp @s ~ ~ ~ 0 90
 
 

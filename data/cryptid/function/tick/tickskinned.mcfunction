@@ -74,8 +74,8 @@ execute if entity @a[distance=30..] run execute if score @s cryptid.player.rando
 ##ticksleeping
 execute as @s[tag=cryptid.sleepskinned] run function cryptid:action/skinned/sleepskinned
 
-execute at @s[tag=!cryptid.diggingskinned, tag=!cryptid.sleepskinned] unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~0.1 ~
-execute at @s[tag=!cryptid.diggingskinned, tag=!cryptid.sleepskinned] unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run playsound minecraft:block.grass.hit ambient @a[distance=0..10] ~ ~ ~ 1 0.1
-execute at @s[tag=!cryptid.diggingskinned, tag=!cryptid.sleepskinned] unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run particle block{block_state:{Name:dirt}} ~ ~1 ~ 0.1 0.1 0.1 0 200
+execute at @s[tag=!cryptid.diggingskinned, tag=!cryptid.sleepskinned] unless block ~ ~ ~ #cryptid:nonsolid run tp @s ~ ~0.1 ~
+execute at @s[tag=!cryptid.diggingskinned, tag=!cryptid.sleepskinned] unless block ~ ~ ~ #cryptid:nonsolidt:block.grass.hit ambient @a[distance=0..10] ~ ~ ~ 1 0.1
+execute at @s[tag=!cryptid.diggingskinned, tag=!cryptid.sleepskinned] unless block ~ ~ ~ #cryptid:nonsolidck_state:{Name:dirt}} ~ ~1 ~ 0.1 0.1 0.1 0 200
 
 

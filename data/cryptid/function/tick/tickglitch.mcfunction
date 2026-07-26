@@ -51,8 +51,8 @@ execute as @e[type=!player, distance=1..20] at @s run tp @s ~ ~ ~ facing entity 
 
 ##out of ground
 
-execute unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~0.03 ~
-execute unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run execute as @a[distance=0..8] at @s run tp @s ~ ~ ~ facing entity @e[type=vindicator, limit=1, sort=nearest, tag=cryptid.deci4] eyes
+execute unless block ~ ~ ~ #cryptid:nonsolid run tp @s ~ ~0.03 ~
+execute unless block ~ ~ ~ #cryptid:nonsolid run execute as @a[distance=0..8] at @s run tp @s ~ ~ ~ facing entity @e[type=vindicator, limit=1, sort=nearest, tag=cryptid.deci4] eyes
 
 
 

@@ -9,7 +9,7 @@ execute if entity @p[distance=30..] run kill @s
 ##light
 execute unless predicate cryptid:checklight run kill @s
 
-execute unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run kill @s
+execute unless block ~ ~ ~ #cryptid:nonsolid run kill @s
 
 
 execute store result score @s cryptid.player.random run random value 1..300

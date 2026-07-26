@@ -6,8 +6,8 @@ execute if entity @s[tag=!inittree] run tag @e[type=armor_stand, tag=cryptid.eld
 
 
 ##inground
-execute unless block ~ ~2 ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~0.05 ~ facing entity @p
-execute unless block ~ ~2 ~ #minecraft:enchantment_power_transmitter positioned ~ ~10 ~ positioned over motion_blocking_no_leaves run particle dust_pillar{block_state:{Name:netherrack}} ~ ~-0.1 ~ 1 0.2 1 0.01 10
+execute unless block ~ ~2 ~ #cryptid:nonsolid run tp @s ~ ~0.05 ~ facing entity @p
+execute unless block ~ ~2 ~ #cryptid:nonsolid positioned ~ ~10 ~ positioned over motion_blocking_no_leaves run particle dust_pillar{block_state:{Name:netherrack}} ~ ~-0.1 ~ 1 0.2 1 0.01 10
 
 
 scoreboard players remove @p[distance=0..14] cryptid.player.harmony 3

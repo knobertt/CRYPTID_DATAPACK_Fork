@@ -7,7 +7,7 @@ execute if entity @s[tag=!inittree] run tag @e[type=armor_stand, tag=cryptid.tre
 
 
 ##inground
-execute unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~0.05 ~ facing entity @p
+execute unless block ~ ~ ~ #cryptid:nonsolid run tp @s ~ ~0.05 ~ facing entity @p
 
 scoreboard players remove @p[distance=0..14] cryptid.player.harmony 3
 

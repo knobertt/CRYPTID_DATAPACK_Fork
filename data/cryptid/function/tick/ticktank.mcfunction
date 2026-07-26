@@ -15,7 +15,7 @@ execute if entity @s[scores={cryptid.mob.movz=1..}] run item replace entity @s a
 execute if score @s cryptid.player.random matches 1..70 run item replace entity @s armor.head with air
 
 
-execute unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run execute unless block ~ ~ ~ water run execute unless block ~ ~ ~ #flowers run execute unless block ~ ~ ~ #wall_post_override run execute at @p rotated as @p run tp @s ^-1 ^-2 ^-15
+execute unless block ~ ~ ~ #cryptid:nonsolid run execute unless block ~ ~ ~ water run execute unless block ~ ~ ~ #flowers run execute unless block ~ ~ ~ #wall_post_override run execute at @p rotated as @p run tp @s ^-1 ^-2 ^-15
 
 
 

@@ -12,7 +12,7 @@ execute store result score @s cryptid.player.random run random value 1..120000
 
 execute if score @s cryptid.player.random matches 300 run function cryptid:events/quietkill
 
-execute if score @s cryptid.player.random matches 1..1500 run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 minecraft:red_terracotta replace #minecraft:overworld_carver_replaceables
+execute if score @s cryptid.player.random matches 1..1500 run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 minecraft:red_terracotta replace #cryptid:replaceable/base_all
 
 
 attribute @s minecraft:generic.knockback_resistance base set 120
@@ -26,13 +26,10 @@ execute if score .globaltime cryptid.time matches 1..14000 unless predicate cryp
 effect give @s minecraft:slowness infinite 255 true
 
 
+execute if block ~ ~-1 ~ #cryptid:nonsolid run tp @s ~ ~-1 ~
+execute if block ~ ~ ~ #crypt run tp @s ~ ~-1 ~
 
-execute if block ~ ~-1 ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~-1 ~
-execute if block ~ ~-1 ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~-1 ~
-execute if block ~ ~-1 ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~-1 ~
 
 ##kill
-
 execute if block ~ ~ ~ lava run function cryptid:events/quietkill
 execute if block ~ ~-1 ~ magma_block run function cryptid:events/quietkill
-execute if block ~ ~-1 ~ pointed_dripstone run function cryptid:events/quietkill

@@ -47,14 +47,14 @@ execute if entity @p[distance=10..] if score @s[scores={cryptid.timer=..0}] cryp
 
 
 ##dig
-execute rotated as @s if entity @s[tag=dig] at @s if block ~ ~3 ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~-0.37 ~
-execute rotated as @s if entity @s[tag=dig] at @s if block ~ ~3 ~ #minecraft:enchantment_power_transmitter run execute positioned ~ ~3 ~ positioned over motion_blocking_no_leaves run particle block{block_state:{Name:red_concrete}} ~ ~-0.2 ~ 0.2 0.2 0.2 0 75
+execute rotated as @s if entity @s[tag=dig] at @s if block ~ ~3 ~ #cryptid:nonsolid
+execute rotated as @s if entity @s[tag=dig] at @s if block ~ ~3 ~ #cryptid:nonsolid run execute positioned ~ ~3 ~ positioned over motion_blocking_no_leaves run particle block{block_state:{Name:red_concrete}} ~ ~-0.2 ~ 0.2 0.2 0.2 0 75
 
 
 
 ##undig
-execute rotated as @s if entity @s[tag=!dig] at @s unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~0.37 ~
-execute rotated as @s if entity @s[tag=!dig] at @s unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run execute positioned ~ ~3 ~ positioned over motion_blocking_no_leaves run particle block{block_state:{Name:red_concrete}} ~ ~-0.2 ~ 0.2 0.2 0.2 0 75
+execute rotated as @s if entity @s[tag=!dig] at @s unless block ~ ~ ~ #cryptid:nonsolid run tp @s ~ ~0.37 ~
+execute rotated as @s if entity @s[tag=!dig] at @s unless block ~ ~ ~ #cryptid:nonsolid run execute positioned ~ ~3 ~ positioned over motion_blocking_no_leaves run particle block{block_state:{Name:red_concrete}} ~ ~-0.2 ~ 0.2 0.2 0.2 0 75
 
 
 execute store result score @s cryptid.random run random value 1..370
