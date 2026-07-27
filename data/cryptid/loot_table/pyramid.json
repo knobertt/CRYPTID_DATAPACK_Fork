@@ -90,7 +90,7 @@
                       "custom_data": {
                         "cryptid.shotgunarrow": 1
                       },
-                      "custom_name": "[\"\",{\"text\":\"Shrapnel round\",\"italic\":false}]"
+                      "custom_name": "[\"\",{\"text\":\"empty\",\"italic\":false,\"color\":\"gray\"}]"
                     }
                   }
                 ],

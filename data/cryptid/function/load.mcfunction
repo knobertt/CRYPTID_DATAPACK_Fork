@@ -244,3 +244,5 @@ function cryptid:rituals/initial/orificecraving
 
 ## Long tick loop 1 minute
 function cryptid:ticklong
+
+tellraw @a ["",{"text":"Welcome","color":"#990033"}]
