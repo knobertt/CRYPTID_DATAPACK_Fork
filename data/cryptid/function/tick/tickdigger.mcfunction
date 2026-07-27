@@ -1,5 +1,7 @@
 execute if entity @p[distance=15..] run effect give @s minecraft:speed 1 2 true
 execute if entity @p[distance=..15] run effect give @s minecraft:slowness 1 0 true
+
+
 effect give @s minecraft:invisibility infinite 2 true
 
 

@@ -15,7 +15,7 @@ attribute @s minecraft:generic.knockback_resistance base set 120
 attribute @s minecraft:generic.attack_knockback base set 2
 
 data merge entity @s {NoAI:1b}
-execute if entity @s[nbt={Health:100f}] if score .globaltime cryptid.time matches 1..14000 run data merge entity @s {NoAI:1b}
+execute if entity @s[nbt={Health:100f}] unless score .globaltime cryptid.time matches 1..14000 run data merge entity @s {NoAI:0b}
 
 item replace entity @s armor.head with potion[minecraft:custom_model_data=1317]
 execute unless score .globaltime cryptid.time matches 1..14000 if entity @s[nbt={Health:100f}] run item replace entity @s armor.head with potion[minecraft:custom_model_data=1303]
