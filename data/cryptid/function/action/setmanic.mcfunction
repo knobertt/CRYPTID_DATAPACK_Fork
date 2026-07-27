@@ -1,5 +1,5 @@
 scoreboard players set .global cryptid.challenge 2
-scoreboard players set .global cryptid.world.furyrate 15
+scoreboard players set .global cryptid.world.furyrate 12
 
 
 time set midnight
