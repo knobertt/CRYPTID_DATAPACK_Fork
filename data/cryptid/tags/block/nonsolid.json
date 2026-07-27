@@ -25,13 +25,11 @@
         "seagrass",
         "tall_seagrass",
         "sea_pickle",
-        "coral_fan",
         "brain_coral_fan",
         "bubble_coral_fan",
         "fire_coral_fan",
         "horn_coral_fan",
         "tube_coral_fan",
-        "dead_coral_fan",
         "dead_brain_coral_fan",
         "dead_bubble_coral_fan",
         "dead_fire_coral_fan",
@@ -54,7 +52,7 @@
         "nether_sprouts",
         "lily_pad",
         "tripwire",
-        "string",
+        "tripwire",
         "redstone_wire"
     ]
 }
