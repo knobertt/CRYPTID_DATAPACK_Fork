@@ -2,7 +2,7 @@ execute store result score @s cryptid.player.random run random value 1..1000
 
 
 
-execute unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run execute at @p rotated as @p run tp @s ^-1 ^-2 ^-15
+execute unless block ~ ~ ~ #cryptid:nonsolid run execute at @p rotated as @p run tp @s ^-1 ^-2 ^-15
 execute if entity @p[distance=80..] if score @s cryptid.player.random matches 1 run function cryptid:events/quietkill
 
 

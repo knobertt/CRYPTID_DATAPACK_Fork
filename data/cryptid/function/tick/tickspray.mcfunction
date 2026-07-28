@@ -18,7 +18,7 @@ execute if entity @p[distance=0..5] run setblock ~ ~-1 ~ netherrack
 
 
 ##tp up
-execute unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~0.1 ~
+execute unless block ~ ~ ~ #cryptid:nonsolid
 
 execute store result score @s cryptid.player.random run random value 1..1000
 

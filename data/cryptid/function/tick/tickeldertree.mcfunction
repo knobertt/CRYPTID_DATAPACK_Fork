@@ -6,8 +6,8 @@ execute if entity @s[tag=!inittree] run tag @e[type=armor_stand, tag=cryptid.eld
 
 
 ##inground
-execute unless block ~ ~2 ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~0.05 ~ facing entity @p
-execute unless block ~ ~2 ~ #minecraft:enchantment_power_transmitter positioned ~ ~10 ~ positioned over motion_blocking_no_leaves run particle dust_pillar{block_state:{Name:netherrack}} ~ ~-0.1 ~ 1 0.2 1 0.01 10
+execute unless block ~ ~2 ~ #cryptid:nonsolid run tp @s ~ ~0.05 ~ facing entity @p
+execute unless block ~ ~2 ~ #cryptid:nonsolid positioned ~ ~10 ~ positioned over motion_blocking_no_leaves run particle dust_pillar{block_state:{Name:netherrack}} ~ ~-0.1 ~ 1 0.2 1 0.01 10
 
 
 scoreboard players remove @p[distance=0..14] cryptid.player.harmony 3
@@ -19,7 +19,7 @@ particle falling_dust{block_state:{Name:red_concrete}} ~ ~2 ~ 0.6 2.4 0.6 0.1 2 
 
 
 # prevents events when in ground
-execute unless block ~ ~ ~ #enchantment_power_transmitter run return fail
+execute unless block ~ ~2 ~ #enchantment_power_transmitter run return fail
 
 ## spawn corruption
 execute if score .globaltime cryptid.time matches 1200 positioned ~ ~3 ~ run function cryptid:events/general/corruptionspawner
@@ -45,8 +45,8 @@ execute if score @s cryptid.player.random matches 20..70 positioned as @e[distan
 
 ## Agro abilities
 execute if entity @p[distance=..30] if score @s cryptid.mob.cooldown matches ..0 run function cryptid:action/eldertree/attack
-execute as @s[tag=summonatk] if score @s cryptid.mob.cooldown matches 1.. run function cryptid:action/eldertree/ticksummons
-execute as @s[tag=groundatk] if score @s cryptid.mob.cooldown matches 1.. run function cryptid:action/eldertree/tickground
+execute as @s[tag=summonatk] if score @s cryptid.mob.cooldown matches 100.. run function cryptid:action/eldertree/ticksummons
+execute as @s[tag=groundatk] if score @s cryptid.mob.cooldown matches 100.. run function cryptid:action/eldertree/tickground
 
 
 ##### Killing mechanincs

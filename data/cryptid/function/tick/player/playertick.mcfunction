@@ -171,7 +171,6 @@ execute if items entity @s weapon.* *[minecraft:custom_data~{cryptid.item:1}] ru
 execute if entity @s[scores={cryptid.damagedealt2=1..}] at @s run scoreboard players set @s cryptid.damagedealt2 0
 
 ####################################biome logic
-
 execute if biome ~ ~ ~ cryptid:empty run stopsound @s
 execute if biome ~ ~ ~ cryptid:empty run tag @s add cryptid.blackscreen
 execute if biome ~ ~ ~ cryptid:empty run scoreboard players remove @s cryptid.player.harmony 1
@@ -195,8 +194,6 @@ execute store result score @s cryptid.random run random value 1..200
 execute if score @s cryptid.random matches 1 run tag @s remove cryptid.mouthtarget
 
 ## This block is really wird why do it repeate also the @r selector means it selects a random of it type not specific looking at target so idk
-
-
 ######################Tracks the look angle for 
 
 ##checks for specific cryptids in a view cone (multiple eneities supporded at once)
@@ -231,9 +228,6 @@ execute as @s at @s anchored eyes facing entity @e[type=zombified_piglin,tag=cry
 ##looking minecart?
 
 execute anchored eyes facing entity @e[type=vindicator,tag=cryptid.deci2,limit=1,sort=random,distance=0..25] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.6] run effect give @e[tag=cryptid.deci2,type=vindicator, sort=random, limit=1] slowness 1 100 true
-
-##looking hand
-execute anchored eyes facing entity @e[type=vindicator,tag=cryptid.hand,limit=1,sort=random,distance=0..25] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.4] run function cryptid:action/hand/looktest
 
 
 ##looking mimic worm
@@ -355,13 +349,6 @@ execute as @s[tag=!cryptid.recipe.catcher] at @s if score .globaltime cryptid.ti
 
 ##check hints
 execute if score .heartbeat cryptid.globalevent matches 3 run function cryptid:tick/player/hintcheck
-
-
-##fixes
-#execute as @s if score @s cryptid.shotgunammo matches ..-1 run scoreboard players set @s cryptid.shotgunammo 0 
-#execute as @s if score @s cryptid.shotgunammo2 matches ..-1 run scoreboard players set @s cryptid.shotgunammo2 0
-#execute as @s if score @s cryptid.shotgunammo3 matches ..-1 run scoreboard players set @s cryptid.shotgunammo3 0
-
 
 ##testing
 

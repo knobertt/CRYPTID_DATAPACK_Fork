@@ -121,7 +121,6 @@ scoreboard objectives add cryptid.ritual.focicount dummy
 scoreboard objectives add cryptid.ritualrangecap dummy
 scoreboard objectives add cryptid.ritual.probability dummy
 scoreboard objectives add cryptid.ritual.turns dummy
-execute as @r run function cryptid:rituals/initial/orificecraving
 scoreboard objectives add cryptid.ritual.sacrificecounter dummy
 scoreboard objectives add cryptid.athame.cooldown dummy
 
@@ -133,11 +132,9 @@ scoreboard objectives add cryptid.math dummy
 scoreboard players set 10 cryptid.math 10
 scoreboard players set 2 cryptid.math 2
 
-
-
-scoreboard objectives add cryptid.mobhpbase dummy
-scoreboard objectives add cryptid.mobattackbase dummy
-scoreboard objectives add cryptid.mobspeedbase dummy
+#scoreboard objectives add cryptid.mobhpbase dummy
+#scoreboard objectives add cryptid.mobattackbase dummy
+#scoreboard objectives add cryptid.mobspeedbase dummy
 
 
 
@@ -201,7 +198,9 @@ scoreboard objectives add cryptid.infestedtimer dummy
 scoreboard objectives add cryptid.mob.movx dummy
 scoreboard objectives add cryptid.mob.movy dummy
 scoreboard objectives add cryptid.mob.movz dummy
-scoreboard objectives add cryptid.jelly.phase dummy
+
+scoreboard objectives add cryptid.phase dummy
+
 scoreboard objectives add cryptid.damagetaken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add cryptid.placetree minecraft.used:minecraft.oak_sapling
 scoreboard objectives add cryptid.placetree2 minecraft.used:minecraft.jungle_sapling
@@ -239,6 +238,11 @@ execute if score .global cryptid.worldtimer matches ..12000 run scoreboard playe
 
 scoreboard players set -1 cryptid.roty -1
 
+##fix travis
+#data modify storage cryptid:sacrifice craving.type set value "5undead"
+function cryptid:rituals/initial/orificecraving
 
 ## Long tick loop 1 minute
 function cryptid:ticklong
+
+tellraw @a ["",{"text":"Welcome","color":"#990033"}]

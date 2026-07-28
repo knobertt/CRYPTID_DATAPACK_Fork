@@ -9,7 +9,7 @@ execute if entity @p[distance=50..] run function cryptid:events/quietkill
 execute as @s[tag=watcherstart] at @s facing entity @p eyes run tp @s ^ ^ ^3 ~ ~
 
 
-execute unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run execute at @p run tp @s ^ ^ ^-10
+execute unless block ~ ~ ~ #cryptid:nonsolid run execute at @p run tp @s ^ ^ ^-10
 
 
 ##lights

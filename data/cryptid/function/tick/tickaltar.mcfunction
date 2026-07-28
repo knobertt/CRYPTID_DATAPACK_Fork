@@ -24,7 +24,7 @@ execute if entity @s[tag=!init] run tag @s add init
 
 execute store result score @s cryptid.player.random run random value 1..9000
 
-execute unless block ~ ~ ~ #minecraft:enchantment_power_transmitter run tp @s ~ ~0.01 ~
+execute unless block ~ ~ ~ #cryptid:nonsolid run tp @s ~ ~0.01 ~
 
 execute if score @s cryptid.player.random matches 1..10 run playsound minecraft:cryptid.caveeye.ambient ambient @a[distance=0..30] ~ ~ ~ 10 0.9 1
 execute if score @s cryptid.player.random matches 1..5 run function cryptid:events/underground/darkeyes
