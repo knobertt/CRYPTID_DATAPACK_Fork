@@ -13,7 +13,7 @@ execute positioned ~ ~620 ~ run attribute @e[type=vindicator, sort=nearest, tag=
 execute positioned ~ ~620 ~ run attribute @e[type=vindicator, sort=nearest, tag=cryptid.jelly,limit=1] minecraft:generic.scale base set 2
 
 execute positioned ~ ~620 ~ run scoreboard players set @e[type=vindicator, sort=nearest, tag=cryptid.jelly,limit=1] cryptid.mob.class 4
-execute positioned ~ ~620 ~ run scoreboard players set @e[type=vindicator, sort=nearest, tag=cryptid.jelly,limit=1] cryptid.jelly.phase 1
+execute positioned ~ ~620 ~ run scoreboard players set @e[type=vindicator, sort=nearest, tag=cryptid.jelly,limit=1] cryptid.phase 1
 
 
 execute as @e[type=vindicator, tag=cryptid.jelly, tag=!cryptid.markerapplied] at @s run function cryptid:action/general/spawntickmarker {"name":"tickjelly"}

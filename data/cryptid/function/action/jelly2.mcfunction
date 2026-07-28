@@ -1,7 +1,7 @@
 
 spreadplayers ~ ~ 20 40 false @s
 
-scoreboard players add @s cryptid.jelly.phase 1
+scoreboard players add @s cryptid.phase 1
 playsound minecraft:cryptid.jelly.ambient ambient @a[distance=0..30] ~ ~ ~ 2 0.2
 
 fill ~10 ~10 ~10 ~-10 ~-10 ~-10 air replace torch
