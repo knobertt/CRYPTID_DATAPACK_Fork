@@ -4,5 +4,6 @@ summon minecraft:armor_stand ~ ~-10 ~ {DisabledSlots:4144959, Invisible:1b, CanB
 execute as @e[type=armor_stand, tag=cryptid.eldertree, tag=!cryptid.markerapplied] run attribute @s generic.scale base set 2
 execute as @e[type=armor_stand, tag=cryptid.eldertree, tag=!cryptid.markerapplied] at @s run function cryptid:action/general/spawntickmarker {"name":"tickeldertree"}
 
+scoreboard players set @e[tag=cryptid.eldertree,type=armor_stand] cryptid.tree.health 5
 
 scoreboard players set @e[tag=cryptid.eldertree,type=armor_stand] cryptid.mob.class 2

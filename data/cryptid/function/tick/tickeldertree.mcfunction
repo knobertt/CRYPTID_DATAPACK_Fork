@@ -52,5 +52,5 @@ execute as @s[tag=groundatk] if score @s cryptid.mob.cooldown matches 100.. run 
 ##### Killing mechanincs
 
 execute as @s[tag=hurt] run function cryptid:action/eldertree/hurt
-scoreboard players remove @s cryptid.tree.health 1
-execute as @s[tag=hurt] run tag @s remove hurt
+
+execute if score @s cryptid.tree.health matches ..0 run function cryptid:events/quietkill

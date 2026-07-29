@@ -10,7 +10,10 @@ execute if score @s cryptid.player.random matches 16 run execute as @p[distance=
 
 execute unless score @s cryptid.player.random matches 1..15 run return fail
 execute at @p unless block ~ ~-0.3 ~ #cryptid:fleshy run return fail
+execute unless entity @p[distance=3..20] run return fail
 
+
+execute at @s run particle dust_color_transition{from_color:[0.8,0.24,0.3],to_color:[0.46,0.06,0.02],scale:4} ~ ~2 ~ 2 1 2 0.3 250
 
 execute as @p at @s run tp @s ~ ~-0.5 ~
 execute as @p at @s run fill ~ ~ ~ ~ ~-3 ~ air replace #cryptid:fleshy
