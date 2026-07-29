@@ -1,10 +1,10 @@
-summon minecraft:vindicator ~ ~-10 ~ {NoAI:1,Invulnerable:1,DeathLootTable:"minecraft:empty", CustomName:'[{"text":"Awakened Gaia"}]',Tags:["cryptid","cryptid.wall","cryptid.timer"],PersistenceRequired:1b,Silent:1b,attributes:[{id:"generic.scale",base:0.01f},{id:"generic.step_height",base:10000f},{id:"generic.knockback_resistance",base:0.32f}]}
+summon minecraft:vindicator ~ ~-10 ~ {NoAI:1b,Invulnerable:1b,DeathLootTable:"minecraft:empty", CustomName:'[{"text":"Awakened Gaia"}]',Tags:["cryptid","cryptid.wall","cryptid.timer"],PersistenceRequired:1b,Silent:1b,attributes:[{id:"generic.scale",base:0.01f},{id:"generic.step_height",base:10000f},{id:"generic.knockback_resistance",base:0.32f}]}
 
 
 execute positioned ~ ~-10 ~ run effect give @e[type=vindicator, tag=cryptid.wall] minecraft:invisibility infinite 1 true
 
 
-execute positioned ~ ~-10 ~ run scoreboard players set @e[type=vindicator, sort=nearest, tag=cryptid.wall,limit=1] cryptid.mob.class 4
+execute positioned ~ ~-10 ~ run scoreboard players set @e[type=vindicator, sort=nearest, tag=cryptid.wall,limit=1] cryptid.mob.class 9
 
 playsound minecraft:cryptid.wall.spawn ambient @a[distance=0..120] ~ ~ ~ 12000 0.8
 execute store result score @s cryptid.player.random run random value 1..10

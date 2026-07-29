@@ -13,12 +13,12 @@
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 8, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "general/breakerant" } } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 2, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "underground/tunnel" } } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 3, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "underground/spawnhand" } } ] },
-        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 1, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "underground/storywall" } } ] },
+        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 1, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "story/storywall" } } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 1, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "general/spawntumor" } } ] },
 
 
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 8, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "underground/darkeyes" , "fury": 50} } ] },
-        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 7, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "underground/storycrawler" ,"fury": 1000 } } ] },
+        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 3, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "story/storycrawler" ,"fury": 1000 } } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 4, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "underground/spawnspider" , "fury": 2750} } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 4, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "underground/spawnhand", "fury": 900 } } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 5, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "underground/tunnel", "fury": 2000 } } ] }
