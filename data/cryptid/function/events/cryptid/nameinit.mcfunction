@@ -40,6 +40,8 @@ execute if score @s cryptid.player.random matches 38 run data merge entity @s {C
 execute if score @s cryptid.player.random matches 39 run data merge entity @s {CustomName:'{"text":"tag.null"}',CustomNameVisible:1b}
 execute if score @s cryptid.player.random matches 40 run data merge entity @s {CustomName:'{"text":"Freedom"}',CustomNameVisible:1b}
 execute if score @s cryptid.player.random matches 41 run data merge entity @s {CustomName:'{"text":"Navoj"}',CustomNameVisible:1b}
+execute if score @s cryptid.player.random matches 42 run data merge entity @s {CustomName:'{"text":"Greater Boneworm"}',CustomNameVisible:1b}
+execute if score @s cryptid.player.random matches 43 run data merge entity @s {CustomName:'{"text":"Nol1k"}',CustomNameVisible:1b}
 
 execute if score @s cryptid.player.random matches 1..90 run tag @s add cryptid.cursed
 execute if score @s cryptid.player.random matches 1..90 run tag @s add cryptid

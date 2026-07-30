@@ -1,4 +1,5 @@
 execute if entity @s[tag=!inittree] run function cryptid:events/node/block
+execute if entity @s[tag=!inittree] run place feature cryptid:convertflesh ~ ~5 ~
 execute if entity @s[tag=!inittree] run execute positioned ~ ~12 ~ run function cryptid:events/general/corruptionspawner
 execute if entity @s[tag=!inittree] run function cryptid:events/node/block
 execute if entity @s[tag=!inittree] run scoreboard players set @s cryptid.tree.health 5
