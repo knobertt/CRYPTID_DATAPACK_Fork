@@ -22,7 +22,7 @@ execute as @s[tag=killmark] at @s run kill @s
 
 execute as @s[scores={pinhead.state=3..}, tag=looking] run effect give @p nausea 4 9 true
 execute as @s[scores={pinhead.state=6..}, tag=looking] anchored eyes facing entity @p eyes positioned ^ ^ ^2 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.55 ~ ~
-execute as @s[scores={pinhead.state=4..}] run playsound minecraft:cryptid.ambient.wisp ambient @a[distance=..20] ~ ~ ~ 
+execute as @s[scores={pinhead.state=4..}] run playsound minecraft:cryptid.caveeye.ambient ambient @a[distance=..20] ~ ~ ~ 
 execute if entity @p[distance=0..6] at @s run function cryptid:action/pinhead/jump
 
 

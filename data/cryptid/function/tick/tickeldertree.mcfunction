@@ -1,26 +1,27 @@
-execute if entity @s[tag=!inittree] run function cryptid:events/node/block
+execute if entity @s[tag=!inittree] positioned ^ ^ ^4 facing entity @e[sort=random,limit=1] feet run function cryptid:events/node/block
 execute if entity @s[tag=!inittree] run place feature cryptid:convertflesh ~ ~5 ~
 execute if entity @s[tag=!inittree] run execute positioned ~ ~12 ~ run function cryptid:events/general/corruptionspawner
-execute if entity @s[tag=!inittree] run function cryptid:events/node/block
+execute if entity @s[tag=!inittree] positioned ^ ^ ^4 facing entity @e[sort=random,limit=1] feet run function cryptid:events/node/block
 execute if entity @s[tag=!inittree] run scoreboard players set @s cryptid.tree.health 5
+execute if entity @s[tag=!inittree] run scoreboard players set @s cryptid.damagedealt 0
 execute if entity @s[tag=!inittree] run tag @e[type=armor_stand, tag=cryptid.eldertree] add inittree
 
 
-##inground
-execute unless block ~ ~2 ~ #cryptid:nonsolid run tp @s ~ ~0.05 ~ facing entity @p
-execute unless block ~ ~2 ~ #cryptid:nonsolid positioned ~ ~10 ~ positioned over motion_blocking_no_leaves run particle dust_pillar{block_state:{Name:netherrack}} ~ ~-0.1 ~ 1 0.2 1 0.01 10
+##inground 3x3 air block predicate
+execute unless predicate cryptid:check_air_square run tp @s ~ ~0.05 ~ facing entity @p
+execute unless predicate cryptid:check_air_square positioned ~ ~10 ~ positioned over motion_blocking_no_leaves run particle dust_pillar{block_state:{Name:netherrack}} ~ ~-0.1 ~ 1 0.2 1 0.01 10
 
 
 scoreboard players remove @p[distance=0..14] cryptid.player.harmony 3
 
-#despawn
+#despawn chance at set hours
 execute if score .globaltime cryptid.time matches 1200 if score @s cryptid.timer matches ..-12000 if score @s cryptid.random matches 1..100 run function cryptid:action/general/grounddeath
 ## tick
 particle falling_dust{block_state:{Name:red_concrete}} ~ ~2 ~ 0.6 2.4 0.6 0.1 2 force
-
+fill ~ ~-1 ~ ~ ~-1 ~ obsidian replace #cryptid:nonsolid
 
 # prevents events when in ground
-execute unless block ~ ~2 ~ #enchantment_power_transmitter run return fail
+execute unless block ~ ~2 ~ #cryptid:nonsolid run return fail
 
 ## spawn corruption
 execute if score .globaltime cryptid.time matches 1200 positioned ~ ~3 ~ run function cryptid:events/general/corruptionspawner
@@ -46,12 +47,18 @@ execute if score @s cryptid.player.random matches 20..70 positioned as @e[distan
 
 ## Agro abilities
 execute if entity @p[distance=..30] if score @s cryptid.mob.cooldown matches ..0 run function cryptid:action/eldertree/attack
+
 execute as @s[tag=summonatk] if score @s cryptid.mob.cooldown matches 100.. run function cryptid:action/eldertree/ticksummons
 execute as @s[tag=groundatk] if score @s cryptid.mob.cooldown matches 100.. run function cryptid:action/eldertree/tickground
 
 
 ##### Killing mechanincs
 
-execute as @s[tag=hurt] run function cryptid:action/eldertree/hurt
+execute as @s[tag=hurt,scores={cryptid.damagedealt=..0}] run function cryptid:action/eldertree/hurt
+
+
+execute as @s[scores={cryptid.damagedealt=1..}] run tp @s ~ ~0.05 ~
+execute as @s[scores={cryptid.damagedealt=1..}] run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 red_concrete replace #cryptid:nonsolid
+execute as @s[scores={cryptid.damagedealt=1..}] run scoreboard players remove @s cryptid.damagedealt 1
 
 execute if score @s cryptid.tree.health matches ..0 run function cryptid:events/quietkill

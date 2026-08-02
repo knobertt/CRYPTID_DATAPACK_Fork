@@ -10,13 +10,12 @@ execute if score @s cryptid.player.random matches 16 run execute as @p[distance=
 
 execute unless score @s cryptid.player.random matches 1..15 run return fail
 execute at @p unless block ~ ~-0.3 ~ #cryptid:fleshy run return fail
-execute unless entity @p[distance=3..20] run return fail
+execute unless entity @p[distance=4..25] run return fail
 
 
-execute at @s run particle dust_color_transition{from_color:[0.8,0.24,0.3],to_color:[0.46,0.06,0.02],scale:4} ~ ~2 ~ 2 1 2 0.3 250
-
+execute positioned over motion_blocking_no_leaves run particle dust_color_transition{from_color:[0.8,0.24,0.3],to_color:[0.46,0.06,0.02],scale:4} ~ ~2 ~ 3 1 3 0.3 200
 execute as @p at @s run tp @s ~ ~-0.5 ~
-execute as @p at @s run fill ~ ~ ~ ~ ~-3 ~ air replace #cryptid:fleshy
-execute as @p at @s run playsound entity.zombie.break_wooden_door ambient @a[distance=0..20] ~ ~ ~ 1 0.6
+execute as @p at @s run fill ~ ~ ~ ~ ~-2 ~ air replace #cryptid:fleshy
+execute as @p at @s run playsound minecraft:block.deepslate.break ambient @a[distance=0..20] ~ ~ ~ 0.6 0.6
 execute as @p at @s run particle dust_pillar{block_state:{Name:red_concrete}} ~ ~-0.2 ~ 0.2 0.1 0.2 0.1 20 force
 

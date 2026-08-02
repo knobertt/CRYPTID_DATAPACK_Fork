@@ -32,9 +32,9 @@
             {
               "type": "minecraft:explode",
               "attribute_to_user": false,
-              "knockback_multiplier": 2,
-              "radius": 4,
-              "create_fire": true,
+              "knockback_multiplier": 2.5,
+              "radius": 5,
+              "create_fire": false,
               "block_interaction": "trigger",
               "small_particle": {
                 "type": "minecraft:sweep_attack"
