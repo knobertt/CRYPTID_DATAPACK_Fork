@@ -12,7 +12,8 @@ execute unless predicate cryptid:check_air_square run tp @s ~ ~0.05 ~ facing ent
 execute unless predicate cryptid:check_air_square positioned ~ ~10 ~ positioned over motion_blocking_no_leaves run particle dust_pillar{block_state:{Name:netherrack}} ~ ~-0.1 ~ 1 0.2 1 0.01 10
 
 
-scoreboard players remove @p[distance=0..14] cryptid.player.harmony 3
+## decrease flux
+execute if score .heartbeat cryptid.globalevent matches 4 run scoreboard players remove @p[distance=0..20] cryptid.player.flux.modifier 3 
 
 #despawn chance at set hours
 execute if score .globaltime cryptid.time matches 1200 if score @s cryptid.timer matches ..-12000 if score @s cryptid.random matches 1..100 run function cryptid:action/general/grounddeath

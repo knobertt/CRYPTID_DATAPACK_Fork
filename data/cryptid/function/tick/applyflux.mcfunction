@@ -2,34 +2,16 @@
 ##harmony
 execute if score .global cryptid.challenge matches 1 run scoreboard players set @s cryptid.player.harmony -999999
 
-scoreboard players set @s cryptid.player.flux 0
 
-scoreboard players set @s[scores={cryptid.player.heart.distance=55..80}] cryptid.player.flux 1
-scoreboard players set @s[scores={cryptid.player.heart.distance=80..100}] cryptid.player.flux 2
-
-scoreboard players set @s[scores={cryptid.player.heart.distance=40..50}] cryptid.player.flux -1
-scoreboard players set @s[scores={cryptid.player.heart.distance=30..40}] cryptid.player.flux -2
-scoreboard players set @s[scores={cryptid.player.heart.distance=20..30}] cryptid.player.flux -4
-scoreboard players set @s[scores={cryptid.player.heart.distance=10..20}] cryptid.player.flux -6
-scoreboard players set @s[scores={cryptid.player.heart.distance=0..10}] cryptid.player.flux -12
-
-##overrides
-execute if entity @e[tag=cryptid.lessertotem, distance=0..10] run scoreboard players set @s cryptid.player.flux 1
 ##damage dealth loses harmony
-execute as @s[scores={cryptid.damagedealt=1..}] run scoreboard players remove @s cryptid.player.harmony 200
+execute as @s[scores={cryptid.damagedealt=1..}] run scoreboard players remove @s cryptid.player.harmony 100
 execute as @s[scores={cryptid.damagedealt=1..}] run scoreboard players set @s cryptid.damagedealt 0
 
-##darkness
-execute as @s at @s if predicate cryptid:checklight run scoreboard players remove @s cryptid.player.flux 2
-execute as @s at @s unless score .globaltime cryptid.time matches 1000..13000 unless predicate cryptid:checklight run scoreboard players add @s cryptid.player.flux 1
 
-
-##event timer
+#####event timer
 
 scoreboard players add @s cryptid.eventhandler 1
 execute if score @s cryptid.eventhandler matches 200.. run scoreboard players set @s cryptid.eventhandler 0
-
-
 
 
 ##########################actualize and apply random event numbrs based on harmony, full formula in this function

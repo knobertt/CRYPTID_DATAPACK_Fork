@@ -180,6 +180,9 @@ team modify cryptid.nocollide collisionRule never
 scoreboard objectives add cryptid.totemblood dummy
 
 scoreboard objectives add cryptid.player.flux dummy
+scoreboard objectives add cryptid.player.flux.base dummy
+scoreboard objectives add cryptid.player.flux.modifier dummy
+
 
 scoreboard objectives add cryptid.player.harmony dummy
 

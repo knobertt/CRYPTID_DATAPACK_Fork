@@ -9,7 +9,8 @@ execute if entity @s[tag=!inittree] run tag @e[type=armor_stand, tag=cryptid.tre
 ##inground
 execute unless block ~ ~ ~ #cryptid:nonsolid run tp @s ~ ~0.05 ~ facing entity @p
 
-scoreboard players remove @p[distance=0..14] cryptid.player.harmony 3
+## decrease flux
+execute if score .heartbeat cryptid.globalevent matches 4 run scoreboard players remove @p[distance=0..20] cryptid.player.flux.modifier 3 
 
 execute store result score @s cryptid.player.random run random value 1..120000
 

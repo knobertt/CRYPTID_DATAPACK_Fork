@@ -159,9 +159,5 @@ execute as @s[scores={cryptid.click=1..}] if items entity @s weapon.mainhand min
 execute as @s[scores={cryptid.click=1..}] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.tape:1b}] run item replace entity @s weapon.mainhand with air
 
 
-##radio
-
-
-
 ###use totem2
 execute as @s[scores={cryptid.click=1..}] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.totem2:1}] run function cryptid:action/totem2/placetotem2
