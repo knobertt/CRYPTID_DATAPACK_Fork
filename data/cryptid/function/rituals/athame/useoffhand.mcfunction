@@ -7,4 +7,4 @@ execute anchored feet positioned ^-0.4 ^ ^0.3 run particle block{block_state:{Na
 
 
 playsound minecraft:entity.bogged.hurt ambient @a[distance=..15] ~ ~ ~ 0.5 0.2
-damage @p 4 dry_out
+damage @p 4 cryptid:bleedout by @s

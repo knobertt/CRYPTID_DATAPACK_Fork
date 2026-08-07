@@ -57,6 +57,8 @@ scoreboard objectives add cryptid.anitimer2 dummy
 scoreboard objectives add cryptid.darksound dummy
 scoreboard objectives add cryptid.handdamagetimer dummy
 scoreboard objectives add cryptid.pick.cooldown dummy
+scoreboard objectives add cryptid.axe.cooldown dummy
+scoreboard objectives add cryptid.axe.swings dummy
 scoreboard objectives add mimicstart dummy
 scoreboard objectives add cryptid.wallspawn dummy
 scoreboard objectives add cryptid.crawlerspawn dummy

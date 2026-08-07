@@ -4,7 +4,7 @@ execute if entity @s[tag=!inittree] run execute positioned ~ ~12 ~ run function 
 execute if entity @s[tag=!inittree] positioned ^ ^ ^4 facing entity @e[sort=random,limit=1] feet run function cryptid:events/node/block
 execute if entity @s[tag=!inittree] run scoreboard players set @s cryptid.tree.health 5
 execute if entity @s[tag=!inittree] run scoreboard players set @s cryptid.damagedealt 0
-execute if entity @s[tag=!inittree] run tag @e[type=armor_stand, tag=cryptid.eldertree] add inittree
+execute if entity @s[tag=!inittree] run tag @e[type=item_display, tag=cryptid.eldertree] add inittree
 
 
 ##inground 3x3 air block predicate
@@ -28,8 +28,6 @@ execute unless block ~ ~2 ~ #cryptid:nonsolid run return fail
 execute if score .globaltime cryptid.time matches 1200 positioned ~ ~3 ~ run function cryptid:events/general/corruptionspawner
 execute if score .globaltime cryptid.time matches 18000 positioned ~ ~3 ~ run function cryptid:events/general/corruptionspawner
 
-execute if score .globaltime cryptid.time matches 17000..18000 unless block ~ ~-1 ~ air run tp @s[nbt={OnGround:1b}] ^ ^ ^0.03 facing entity @p
-
 
 ## new idea periods of activity and inactivity with min cooldowns
 
@@ -37,11 +35,11 @@ execute if score .globaltime cryptid.time matches 17000..18000 unless block ~ ~-
 execute store result score @s cryptid.player.random run random value 1..4000
     #flicker
 execute if score @s cryptid.player.random matches 5..9 run function cryptid:events/cryptid/flicker5
-
     #infest
 execute if score @s cryptid.player.random matches 71..80 run particle crimson_spore ~ ~2 ~ 2.4 5 2.4 0.1 1000 force
 execute if score @s cryptid.player.random matches 71..80 as @n[type=#cryptid:infestable,tag=!cryptid] at @s run function cryptid:action/hostile/advancecorrupt
-    #pop
+execute if score @s cryptid.player.random matches 71..88 as @e[tag=cryptid.evilmob,type=#cryptid:infestable,distance=..40,limit=2] at @s run damage @s 0 minecraft:player_attack by @p
+   #pop
 execute if score @s cryptid.player.random matches 81..90 as @n[type=#cryptid:infestable,tag=!cryptid] at @s run function cryptid:action/general/fireworksdeath
     #soma
 execute if score @s cryptid.player.random matches 20..70 positioned as @e[distance=..10,sort=random,limit=1] positioned over motion_blocking_no_leaves run fillbiome ~-8 ~-5 ~-8 ~8 ~8 ~8 cryptid:soma
@@ -55,7 +53,7 @@ execute as @s[tag=groundatk] if score @s cryptid.mob.cooldown matches 100.. run 
 
 ##### Killing mechanincs
 
-execute as @s[tag=hurt,scores={cryptid.damagedealt=..0}] run function cryptid:action/eldertree/hurt
+execute as @s[tag=hurt] run function cryptid:action/eldertree/hurt
 
 
 execute as @s[scores={cryptid.damagedealt=1..}] run tp @s ~ ~0.05 ~
