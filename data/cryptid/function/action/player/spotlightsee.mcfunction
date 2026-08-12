@@ -1,6 +1,4 @@
-say a
-particle angry_villager ~ ~ ~ 1 1 1 1 50
-return fail
+
 tag @s add cryptid.bosschase
 effect give @s slowness 1 2 true
 damage @s 1 minecraft:dragon_breath by @e[tag=cryptid, sort=nearest, limit=1]
