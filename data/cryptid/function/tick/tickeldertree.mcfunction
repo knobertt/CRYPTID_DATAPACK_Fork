@@ -1,7 +1,7 @@
-execute if entity @s[tag=!inittree] positioned ^ ^ ^4 facing entity @e[sort=random,limit=1] feet run function cryptid:events/node/block
+execute if entity @s[tag=!inittree] positioned ^ ^ ^6 facing entity @e[sort=random,limit=1] feet run function cryptid:events/node/block
 execute if entity @s[tag=!inittree] run place feature cryptid:convertflesh ~ ~5 ~
 execute if entity @s[tag=!inittree] run execute positioned ~ ~12 ~ run function cryptid:events/general/corruptionspawner
-execute if entity @s[tag=!inittree] positioned ^ ^ ^4 facing entity @e[sort=random,limit=1] feet run function cryptid:events/node/block
+execute if entity @s[tag=!inittree] positioned ^ ^ ^8 facing entity @e[sort=random,limit=1] feet run function cryptid:events/node/block
 execute if entity @s[tag=!inittree] run scoreboard players set @s cryptid.tree.health 5
 execute if entity @s[tag=!inittree] run scoreboard players set @s cryptid.damagedealt 0
 execute if entity @s[tag=!inittree] run tag @e[type=item_display, tag=cryptid.eldertree] add inittree
@@ -13,7 +13,12 @@ execute unless predicate cryptid:check_air_square positioned ~ ~10 ~ positioned 
 
 
 ## decrease flux
-execute if score .heartbeat cryptid.globalevent matches 4 run scoreboard players remove @p[distance=0..20] cryptid.player.flux.modifier 3 
+#execute if score .heartbeat cryptid.globalevent matches 4 run scoreboard players remove @a[distance=51..70] cryptid.player.flux.modifier 1 
+#execute if score .heartbeat cryptid.globalevent matches 4 run scoreboard players remove @a[distance=36..50] cryptid.player.flux.modifier 2 
+#execute if score .heartbeat cryptid.globalevent matches 4 run scoreboard players remove @a[distance=21..35] cryptid.player.flux.modifier 3 
+#execute if score .heartbeat cryptid.globalevent matches 4 run scoreboard players remove @a[distance=0..20] cryptid.player.flux.modifier 4 
+
+
 
 #despawn chance at set hours
 execute if score .globaltime cryptid.time matches 1200 if score @s cryptid.timer matches ..-12000 if score @s cryptid.random matches 1..100 run function cryptid:action/general/grounddeath

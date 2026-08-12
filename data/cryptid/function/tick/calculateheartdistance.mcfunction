@@ -9,7 +9,7 @@ execute store result score @s cryptid.playerz run data get entity @s Pos[2]
 #grab both x
 
 execute store result score @s math.target run scoreboard players get @s cryptid.playerx
-execute store result score @s math.source run scoreboard players get @e[type=vindicator,sort=nearest,limit=1,tag=cryptid.vorheart] cryptid.heartx
+execute store result score @s math.source run scoreboard players get @e[type=#cryptid:heartbase,sort=nearest,limit=1,tag=cryptid.heart] cryptid.heartx
 function math:sub
 scoreboard players operation @s math.target *= @s math.target
 execute store result score @s cryptid.player.distx run scoreboard players get @s math.target
@@ -17,7 +17,7 @@ execute store result score @s cryptid.player.distx run scoreboard players get @s
 #grabboth y
 
 execute store result score @s math.target run scoreboard players get @s cryptid.playery
-execute store result score @s math.source run scoreboard players get @e[type=vindicator,sort=nearest,limit=1,tag=cryptid.vorheart] cryptid.hearty
+execute store result score @s math.source run scoreboard players get @e[type=#cryptid:heartbase,sort=nearest,limit=1,tag=cryptid.heart] cryptid.hearty
 function math:sub
 scoreboard players operation @s math.target *= @s math.target
 execute store result score @s cryptid.player.disty run scoreboard players get @s math.target
@@ -25,7 +25,7 @@ execute store result score @s cryptid.player.disty run scoreboard players get @s
 #grabboth z
 
 execute store result score @s math.target run scoreboard players get @s cryptid.playerz
-execute store result score @s math.source run scoreboard players get @e[type=vindicator,sort=nearest,limit=1,tag=cryptid.vorheart] cryptid.heartz
+execute store result score @s math.source run scoreboard players get @e[type=#cryptid:heartbase,sort=nearest,limit=1,tag=cryptid.heart] cryptid.heartz
 function math:sub
 scoreboard players operation @s math.target *= @s math.target
 execute store result score @s cryptid.player.distz run scoreboard players get @s math.target

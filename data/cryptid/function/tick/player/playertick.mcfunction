@@ -127,9 +127,7 @@ execute as @s at @s run execute unless items entity @s weapon.* sugar[minecraft:
 
 
 
-##############shotgunhandler
-
-
+##shotgunhandler
 scoreboard players set @s cryptid.range 10
 
 ############### WORLD FLUX then harmony
@@ -280,7 +278,7 @@ scoreboard players set @s cryptid.player.crouch 0
 
 ##commandstoragehandling
 
-execute as @e[type=vindicator, tag=cryptid.vorheart, sort=nearest, limit=1] at @s run function cryptid:tick/getheartdistance
+execute as @e[type=#cryptid:heartbase, tag=cryptid.heart, sort=nearest, limit=1] at @s run function cryptid:tick/getheartdistance
 execute if score .heartbeat cryptid.globalevent matches 1 run function cryptid:tick/calculateheartdistance
 
 

@@ -1,7 +1,7 @@
 
 
-tp @s ~ ~-30 ~ ~ ~15
-execute at @s as @e[type=minecraft:vindicator, tag=cryptid.spotlight] if score @s cryptid.mob.id = @n[type=minecraft:vindicator, tag=cryptid.spotlight2,distance=..1] cryptid.mob.id run tag @s add current
+tp @s ~ ~-5.1 ~ ~ ~
+execute at @s as @e[type=minecraft:vindicator, tag=cryptid.spotlight] if score @s cryptid.mob.id = @n[type=minecraft:item_display, tag=cryptid.spotlight2,distance=..1] cryptid.mob.id run tag @s add current
 execute at @s anchored eyes facing entity @n[type=minecraft:vindicator, tag=cryptid.spotlight,tag=current] eyes run tp @s ~ ~ ~ ~180 ~
 execute as @e[type=minecraft:vindicator, tag=cryptid.spotlight,tag=current] run tag @s remove current
 
