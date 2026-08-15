@@ -79,22 +79,31 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:villager_spawn_egg",
-          "weight": 1,
           "functions": [
             {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:lore": [
-                  "[\"\",{\"text\":\"Fueled by suffering\",\"italic\":false,\"color\":\"dark_red\"}]"
+                  "[{\"text\":\"Fueled by suffering\",\"color\":\"dark_red\"}]",
+                  "[\"\",{\"text\":\"<When Held>\",\"italic\":false,\"color\":\"dark_red\"},{\"text\":\" - protects the user \",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"text\":\"warding off an attacking Cryptid\",\"italic\":false,\"color\":\"gray\"}]",
+                  "[\"\"]",
+                  "[{\"text\":\"<When Placed> \",\"italic\":false,\"color\":\"dark_red\"}]",
+                  "[{\"text\":\"- Creates a large barrier that passively\",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"text\":\"deflects reality warping events. \",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"text\":\"Ideal for fortifying a settlement\",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"text\":\"- Can be fueled by blood to\",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"text\":\"temporarily repel Cryptids within \",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"text\":\"a short range\",\"italic\":false,\"color\":\"gray\"}]"
                 ],
                 "minecraft:custom_data": "{cryptid.item:1b}",
                 "minecraft:custom_model_data": 1319,
-                "minecraft:custom_name": "[{\"text\":\"Lesser Bloodstone Totem\",\"italic\":false}]",
+                "minecraft:custom_name": "[{\"text\":\"Lesser Bloodstone Totem\",\"italic\":false,\"color\":\"red\"}]",
                 "minecraft:entity_data": {
                   "id": "villager",
                   "VillagerData": {
                     "type": "plains",
-                    "profession": "farmer",
+                    "profession": "nitwit",
                     "level": 2
                   },
                   "CustomName": "[{\"text\":\"Lesser Bloodstone Totem\",\"color\":\"red\"}]",
@@ -104,13 +113,15 @@
                   "Silent": true,
                   "Tags": [
                     "cryptid",
-                    "cryptid.lessertotem"
+                    "cryptid.lessertotem",
+                    "cryptid.ignore.radar",
+                    "cryptid.ignore.totemward"
                   ],
                   "active_effects": [
                     {
                       "id": "invisibility",
                       "duration": -1,
-                      "show_particles": true
+                      "show_particles": false
                     }
                   ],
                   "ArmorItems": [

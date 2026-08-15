@@ -43,7 +43,8 @@ execute unless block ~ ~40 ~ air run function cryptid:events/quietkill
 execute if entity @s[tag=cryptid.activatedfractal] run execute positioned ~ ~10 ~ run setblock ^1 ^6 ^7 minecraft:red_terracotta
 execute if entity @s[tag=cryptid.activatedfractal] run execute positioned ~ ~10 ~ run setblock ^4 ^3 ^1 minecraft:crimson_nylium
 execute if entity @s[tag=cryptid.activatedfractal] run execute positioned ~ ~10 ~ run setblock ^2 ^-2 ^-1 minecraft:red_terracotta
-
+execute if entity @s[tag=cryptid.activatedfractal,tag=!touchdown] at @s unless block ~ ~20 ~ air run function cryptid:events/sky/octopus
+execute if entity @s[tag=cryptid.activatedfractal,tag=!touchdown] at @s unless block ~ ~20 ~ air run tag @s add touchdown
 
 execute if entity @p[distance=0..20] run function cryptid:events/quietkill
 execute as @p[distance=0..20] at @s run stopsound @s

@@ -1,4 +1,5 @@
 scoreboard players set @s cryptid.axe.cooldown 7
+effect give @s weakness 1 255 true
 
 damage @s[scores={cryptid.axe.swings=..0}] 4 cryptid:bleedout
 execute if score @s cryptid.axe.swings matches ..0 run particle block{block_state:nether_wart_block} ~ ~1 ~ 0.1 0.1 0.1 0.1 5
@@ -16,7 +17,7 @@ playsound minecraft:cryptid.axe.draw ambient @a ~ ~1 ~ 1 1.2
 
 ## Summon blade
 execute anchored eyes run summon item_display ^ ^ ^1 {Tags:["cryptid","cryptid.axeproj","cryptid.ignore.totemward","cryptid.ignore.radar","cryptid.timer"],id:"minecraft:item_display",item:{id:"minecraft:air",Count:1},item_display:"none"}
-scoreboard players operation @s cryptid.player.id = @n[tag=cryptid.axeproj] cryptid.player.id 
+scoreboard players operation @n[tag=cryptid.axeproj] cryptid.player.id = @s cryptid.player.id
 
 execute store result score @s cryptid.player.random run random value 2..8
 execute if score @s cryptid.player.random matches 1..2 run tag @n[tag=cryptid.axeproj] add right1

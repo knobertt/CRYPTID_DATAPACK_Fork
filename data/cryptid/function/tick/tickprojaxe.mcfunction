@@ -33,4 +33,4 @@ execute if score @s cryptid.timer matches -3 as @e[tag=cryptid.eldertree,distanc
 
 execute if score @s cryptid.timer matches ..-6 run tag @p[tag=owner] remove swinging
 execute if score @s cryptid.timer matches ..-6 run kill @s
-tag @p[tag=owner] remove owner
+tag @a[tag=owner,distance=..10] remove owner
