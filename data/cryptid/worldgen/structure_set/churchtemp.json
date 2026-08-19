@@ -1,16 +1,17 @@
 {
-  "placement": {
-    "type": "minecraft:concentric_rings",
-    "count": 1,
-    "distance": 20,
-    "preferred_biomes": "#minecraft:has_structure/mineshaft",
-    "salt": 0,
-    "spread": 6
-  },
   "structures": [
     {
       "structure": "cryptid:churchtemp",
       "weight": 1
     }
-  ]
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 250,
+    "separation": 80,
+    "salt": 113746277,
+    "spread_type": "linear",
+    "frequency": 0.1
+
+  }
 }
