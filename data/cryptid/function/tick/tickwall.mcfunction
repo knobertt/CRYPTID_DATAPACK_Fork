@@ -7,6 +7,8 @@ execute if score .heartbeat cryptid.globalevent matches 1 if entity @s[tag=init,
 execute if entity @s[tag=!init] at @s run tp @s ~ ~ ~ facing entity @p
 execute if entity @s[tag=!init] at @s run tag @s add init
 
+## prevent death from void
+effect give @s instant_health infinite 200 true
 
 ##random
 execute store result score @s cryptid.player.random run random value 1..200
@@ -18,8 +20,8 @@ execute at @s anchored eyes facing entity @p eyes positioned ^ ^ ^0.01 rotated a
 
 
 ##kill
+execute as @s[tag=!stoppedsound] at @s if entity @s[y=60,dx=1000] run function cryptid:action/wallstop
 execute as @s at @s if entity @s[y=60,dx=1000] run function cryptid:events/quietkill
-
 
 
 ##advanced player selection
@@ -29,6 +31,7 @@ execute anchored eyes positioned ^ ^ ^400 as @a[distance=0..401] run tag @s add 
 execute as @a[tag=zone1, tag=zone2] at @s run function cryptid:action/meatcapture
 
 ##kill @s
+execute if score @s[tag=!stoppedsound] cryptid.timer matches ..0 run function cryptid:action/wallstop
 execute if score @s cryptid.timer matches ..0 run function cryptid:events/quietkill
 
 
@@ -38,4 +41,5 @@ tag @a remove zone2
 
 
 ##kill
+execute if entity @p[distance=110..] as @s[tag=!stoppedsound] run function cryptid:action/wallstop
 execute if entity @p[distance=110..] run function cryptid:events/quietkill

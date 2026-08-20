@@ -54,7 +54,7 @@ execute store result score @s cryptid.player.random run random value 1..10000
 
 execute if entity @p[distance=0..40,scores={cryptid.player.harmony=..-9000}] if score @s cryptid.player.random matches 2..3000 run tag @s add cryptid.tank.active
 
-execute if score @s cryptid.player.random matches 1..200 run execute as @a[distance=0..40] at @s run function cryptid:events/cryptid/radiodead 
+execute if score @s cryptid.player.random matches 1..200 run execute as @a[distance=0..40] at @s run function cryptid:events/cryptid/radiodead
 
 execute if score @s cryptid.player.random matches 1 run function cryptid:events/quietkill
 

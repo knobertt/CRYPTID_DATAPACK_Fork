@@ -6,7 +6,7 @@ execute if score @s cryptid.random matches 1 run function cryptid:events/cryptid
 execute if score @s cryptid.random matches 1 run function cryptid:events/general/ant
 execute if score @s cryptid.random matches 1 run function cryptid:events/cryptid/jelly1
 
-damage @s 12 minecraft:drown
+damage @s 10 cryptid:bleedout
 playsound minecraft:entity.allay.death ambient @a ~ ~ ~ 1 0.1
 particle minecraft:vault_connection ~ ~2 ~ 0.5 0.5 0.5 1 600
 scoreboard players add @s cryptid.player.harmony 4000

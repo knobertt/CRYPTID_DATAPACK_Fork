@@ -1,6 +1,6 @@
 scoreboard players add @s cryptid.pick.cooldown 1000
 
-damage @s 5 minecraft:drown
+damage @s 5 cryptid:bleedout
 playsound minecraft:entity.allay.death ambient @a ~ ~ ~ 1 0.1
 particle minecraft:vault_connection ~ ~2 ~ 0.5 0.5 0.5 1 600
 

@@ -10,7 +10,7 @@ execute if score @s cryptid.wallspawn matches 2 run function cryptid:events/cryp
 
 execute if score @s cryptid.wallspawn matches 3 run tellraw @s {"text":"The end draws near","color":"dark_red"}
 execute if score @s cryptid.wallspawn matches 3 run function cryptid:events/cryptid/flicker5
-execute if score @s cryptid.wallspawn matches 3 run function cryptid:events/underground/tunnel
+execute if score @s cryptid.wallspawn matches 3 run function cryptid:events/underground/tunnel/
 
 
 execute if score @s cryptid.wallspawn matches 4 run execute positioned ^ ^-20 ^60 run function cryptid:events/underground/wall

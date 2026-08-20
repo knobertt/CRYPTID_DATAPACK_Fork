@@ -5,7 +5,8 @@ execute if entity @p[distance=0..7] run tp @s ~ ~ ~ facing entity @p
 execute if entity @p[distance=0..3] run damage @p 0.5 minecraft:cramming by @s
 tag @p[distance=0..6] add cryptid.blackscreen
 
-scoreboard players remove @p[distance=0..20] cryptid.player.harmony 2
+## decrease flux
+execute if score .heartbeat cryptid.globalevent matches 4 run scoreboard players remove @p[distance=0..20] cryptid.player.flux.modifier 2 
 
 execute if score @s cryptid.player.random matches 1 run execute as @e[type=vindicator, tag=cryptid.creed] at @s run function cryptid:events/quietkill
 

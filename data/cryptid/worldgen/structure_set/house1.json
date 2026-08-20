@@ -1,16 +1,17 @@
 {
-  "placement": {
-    "type": "minecraft:concentric_rings",
-    "count": 1,
-    "distance": 20,
-    "preferred_biomes": "#minecraft:has_structure/mineshaft",
-    "salt": 2131245,
-    "spread": 0
-  },
   "structures": [
     {
       "structure": "cryptid:house1",
       "weight": 1
     }
-  ]
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 250,
+    "separation": 80,
+    "salt": 888725131,
+    "spread_type": "linear",
+    "frequency": 0.1
+
+  }
 }

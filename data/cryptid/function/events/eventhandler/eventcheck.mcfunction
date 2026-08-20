@@ -32,6 +32,7 @@ function cryptid:events/eventhandler/primerevents
 #mining ONLY events
 
 execute at @s as @s[y=40,dy=-1000] at @s run function cryptid:events/eventhandler/macroroll {"eventgroup":"mining"}
+execute at @s as @s[y=40,dy=-1000] at @s run function cryptid:events/cryptid/flicker2
 execute at @s as @s[y=40,dy=-1000] if score @s cryptid.event.random matches 1..50 at @s run function cryptid:events/eventhandler/macroroll {"eventgroup":"generalunderground"}
 
 

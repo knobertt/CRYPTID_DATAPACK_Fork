@@ -18,7 +18,10 @@ execute if score @s cryptid.player.random matches 7..12 run function cryptid:eve
 execute if score @s cryptid.player.random matches 13..17 run function cryptid:events/cryptid/chunkgrass
 execute if score @s cryptid.player.random matches 13..47 run function cryptid:events/node/mobs
 
-scoreboard players remove @p[distance=0..10] cryptid.player.harmony 2
+## decrease flux
+execute if score .heartbeat cryptid.globalevent matches 4 run scoreboard players remove @p[distance=0..10] cryptid.player.flux.modifier 2 
+
+
 particle falling_dust{block_state:{Name:red_concrete}} ~ ~2 ~ 0.4 0.4 0.4 10 2
 
 execute store result score @s cryptid.player.random run random value 1..20000

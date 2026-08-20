@@ -6,7 +6,6 @@ summon minecraft:armor_stand ~ ~-10 ~ {CustomName:'[{"text":"Living Bark"}]', Si
 
 execute if score @s cryptid.player.random matches 1 run item replace entity @e[type=armor_stand, sort=nearest, tag=cryptid.tree, limit=1] armor.head with potion[minecraft:custom_model_data=1345]
 execute if score @s cryptid.player.random matches 2 run item replace entity @e[type=armor_stand, sort=nearest, tag=cryptid.tree, limit=1] armor.head with potion[minecraft:custom_model_data=1346]
-execute if score @s cryptid.player.random matches 3 run item replace entity @e[type=armor_stand, sort=nearest, tag=cryptid.tree, limit=1] armor.head with potion[minecraft:custom_model_data=1347]
 
 execute as @e[type=armor_stand, tag=cryptid.tree, tag=!cryptid.markerapplied] at @s run function cryptid:action/general/spawntickmarker {"name":"ticktree"}
 

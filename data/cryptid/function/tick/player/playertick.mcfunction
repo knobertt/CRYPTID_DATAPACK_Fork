@@ -127,12 +127,12 @@ execute as @s at @s run execute unless items entity @s weapon.* sugar[minecraft:
 
 
 
-##############shotgunhandler
-
-
+##shotgunhandler
 scoreboard players set @s cryptid.range 10
 
-##tick world flux first
+############### WORLD FLUX then harmony
+## (Flux = flux.base + flux.modifier) Flux is applied every tick but only calculated every few ticks to save on performance.
+execute if score .heartbeat cryptid.globalevent matches 4 run execute as @s[tag=!boss.fight.1] run function cryptid:tick/calculateflux
 execute unless score cleared cryptid.globalevent matches 1 run execute as @s[tag=!boss.fight.1] run function cryptid:tick/applyflux
 
 ##quote raycast to see if looking...
@@ -173,7 +173,6 @@ execute if entity @s[scores={cryptid.damagedealt2=1..}] at @s run scoreboard pla
 ####################################biome logic
 execute if biome ~ ~ ~ cryptid:empty run stopsound @s
 execute if biome ~ ~ ~ cryptid:empty run tag @s add cryptid.blackscreen
-execute if biome ~ ~ ~ cryptid:empty run scoreboard players remove @s cryptid.player.harmony 1
 
 ##reset damage
 
@@ -279,7 +278,7 @@ scoreboard players set @s cryptid.player.crouch 0
 
 ##commandstoragehandling
 
-execute as @e[type=vindicator, tag=cryptid.vorheart, sort=nearest, limit=1] at @s run function cryptid:tick/getheartdistance
+execute as @e[type=#cryptid:heartbase, tag=cryptid.heart, sort=nearest, limit=1] at @s run function cryptid:tick/getheartdistance
 execute if score .heartbeat cryptid.globalevent matches 1 run function cryptid:tick/calculateheartdistance
 
 

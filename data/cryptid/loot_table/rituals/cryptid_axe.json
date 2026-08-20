@@ -1,0 +1,55 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:warped_fungus_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": "{cryptid.item:1b,cryptid.axe:1b}",
+                "minecraft:custom_model_data": 1312,
+                "minecraft:custom_name": "[\"\",{\"text\":\"Steel Suffering\",\"italic\":false,\"color\":\"red\"}]",
+                "minecraft:lore": [
+                  "[{\"text\":\"Touching the blade leaves a sense\",\"italic\":true,\"color\":\"dark_red\"}]",
+                  "[\"\",{\"text\":\"of \",\"italic\":true,\"color\":\"dark_red\"},{\"text\":\"Pricking\",\"bold\":true,\"italic\":false,\"color\":\"#00ffff\"},{\"text\":\" numbness\",\"italic\":true,\"color\":\"dark_red\"}]",
+                  "[\"\"]",
+                  "[\"\",{\"text\":\"<Attack>\",\"italic\":false,\"color\":\"dark_red\"},{\"text\":\" - apply poison and bleed\",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"text\":\"to the affected Cryptid\",\"italic\":false,\"color\":\"gray\"}]",
+                  "[\"\"]",
+                  "[\"\",{\"text\":\"<Right Click> \",\"italic\":false,\"color\":\"dark_red\"},{\"text\":\"- launch a cleaving attack, \",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"text\":\"beware after three consecutive uses \",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"text\":\"it will begin consuming the user\",\"italic\":false,\"color\":\"gray\"}]"
+                ],
+                "minecraft:item_name": "[\"\",{\"text\":\"Steel Torment\",\"italic\":false,\"color\":\"red\"}]",
+                "minecraft:rarity": "rare",
+                "minecraft:attribute_modifiers": {
+                  "modifiers": [
+                    {
+                      "type": "generic.attack_damage",
+                      "amount": 8.5,
+                      "slot": "mainhand",
+                      "operation": "add_value",
+                      "id": "1747965463588"
+                    },
+                    {
+                      "type": "generic.attack_speed",
+                      "amount": -2.8,
+                      "slot": "mainhand",
+                      "operation": "add_value",
+                      "id": "1747965463539"
+                    }
+                  ],
+                  "show_in_tooltip": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

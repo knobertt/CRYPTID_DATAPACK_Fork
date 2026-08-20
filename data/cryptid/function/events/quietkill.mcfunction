@@ -10,3 +10,4 @@ execute if score @s cryptid.random matches 3 run function cryptid:action/general
 
 ###player
 execute as @a[distance=0..8] at @s run tag @s add cryptid.glitchscreen
+execute as @a[distance=0..8] run scoreboard players remove @s cryptid.player.harmony 300

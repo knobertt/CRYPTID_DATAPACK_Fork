@@ -3,6 +3,7 @@
 ##rand
 execute store result score @s cryptid.player.random run random value 1..200
 ##unactivated
+execute if entity @p[distance=19..] if score @s[tag=activated] cryptid.player.random matches 50..100 run particle minecraft:falling_dust{block_state:sandstone} ~ ~4 ~ 1 2 1 0.2 100
 execute if entity @p[distance=19..] if score @s cryptid.player.random matches 50..100 run tag @s remove activated
 ##activated behavior
 execute if entity @p[distance=0..19] if score @s[tag=!activated] cryptid.player.random matches 1..50 run tag @s add activated

@@ -7,7 +7,7 @@ scoreboard players set @s cryptid.shotgun.cooldown 80
 
 stopsound @p ambient minecraft:cryptid.shotfire
 attribute @p minecraft:generic.knockback_resistance base set 0.05
-execute as @p[tag=!boss.fight.1] anchored eyes run damage @s 4 minecraft:out_of_world by @s
+execute as @p[tag=!boss.fight.1] anchored eyes run damage @s 4 cryptid:bleedout by @s
 attribute @p minecraft:generic.knockback_resistance base set 0
 
 

@@ -57,6 +57,8 @@ scoreboard objectives add cryptid.anitimer2 dummy
 scoreboard objectives add cryptid.darksound dummy
 scoreboard objectives add cryptid.handdamagetimer dummy
 scoreboard objectives add cryptid.pick.cooldown dummy
+scoreboard objectives add cryptid.axe.cooldown dummy
+scoreboard objectives add cryptid.axe.swings dummy
 scoreboard objectives add mimicstart dummy
 scoreboard objectives add cryptid.wallspawn dummy
 scoreboard objectives add cryptid.crawlerspawn dummy
@@ -180,6 +182,9 @@ team modify cryptid.nocollide collisionRule never
 scoreboard objectives add cryptid.totemblood dummy
 
 scoreboard objectives add cryptid.player.flux dummy
+scoreboard objectives add cryptid.player.flux.base dummy
+scoreboard objectives add cryptid.player.flux.modifier dummy
+
 
 scoreboard objectives add cryptid.player.harmony dummy
 

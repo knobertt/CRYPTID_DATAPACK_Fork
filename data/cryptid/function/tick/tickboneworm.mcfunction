@@ -13,7 +13,7 @@ execute if score @s cryptid.player.random matches 20..45 as @e[tag=!cryptid,tag=
 ##Absorb items on the ground
 execute unless entity @s[tag=cryptid.ignore.items] as @e[type=item,distance=0..4] run function cryptid:events/quietkill
 
-execute unless block ~ ~-1 ~ air run setblock ~ ~-1 ~ minecraft:netherrack
+execute unless block ~ ~-1 ~ #cryptid:wormairs run setblock ~ ~-1 ~ minecraft:netherrack
 
 particle block{block_state:{Name:nether_wart_block}} ~ ~0.2 ~ 0 0 0 0 2
 

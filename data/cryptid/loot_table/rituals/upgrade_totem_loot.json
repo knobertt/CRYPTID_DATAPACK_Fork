@@ -13,8 +13,13 @@
                 "minecraft:custom_data": "{cryptid.item:1,cryptid.totem2:1}",
                 "minecraft:custom_name": "[\"\",{\"text\":\"Consecrated Bloodstone Totem\",\"italic\":false,\"bold\":true,\"color\":\"red\"}]",
                 "minecraft:lore": [
-                  "[\"\",{\"text\":\"Place to create a region of safety\",\"italic\":false,\"color\":\"dark_gray\"}]",
-                  "[\"\",{\"text\":\"No longer requires fuel to power\",\"italic\":false,\"color\":\"dark_gray\"}]"
+                  "[{\"text\":\"The parasitic monolith\",\"color\":\"dark_red\"}]",
+                  "[{\"text\":\"<When Placed> \",\"italic\":false,\"color\":\"dark_red\"}]",
+                  "[{\"text\":\"- Creates a massive barrier that \",\"italic\":false,\"color\":\"gray\"}]",
+                  "[\"\",{\"text\":\"passively \",\"italic\":false,\"color\":\"gray\"},{\"text\":\"deflects reality warping \",\"italic\":false,\"color\":\"gray\"}]",
+                  "[\"\",{\"text\":\"events. \",\"italic\":false,\"color\":\"gray\"},{\"text\":\"Ideal for fortifying a region\",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"text\":\"- No longer requires fuel, will banish\",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"text\":\" all Cryptids within its barrier\",\"italic\":false,\"color\":\"gray\"}]"
                 ],
                 "minecraft:custom_model_data": 1313
               }

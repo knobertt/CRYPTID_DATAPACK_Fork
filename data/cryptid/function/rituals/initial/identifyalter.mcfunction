@@ -12,14 +12,20 @@ execute anchored feet positioned ~ ~-4 ~ store success storage cryptid:ritual al
 execute anchored feet positioned ~ ~-4 ~ if predicate cryptid:alter/voidtotem run scoreboard players remove @s cryptid.ritual.stability 15
 execute anchored feet positioned ~ ~-4 ~ store success storage cryptid:ritual alter.voidtotem int 1 if predicate cryptid:alter/voidtotem
 
-execute anchored feet positioned ~ ~-4 ~ if predicate cryptid:alter/upgradetotem run scoreboard players remove @s cryptid.ritual.stability 25
+execute anchored feet positioned ~ ~-4 ~ if predicate cryptid:alter/upgradetotem run scoreboard players remove @s cryptid.ritual.stability 60
 execute anchored feet positioned ~ ~-4 ~ store success storage cryptid:ritual alter.upgradetotem int 1 if predicate cryptid:alter/upgradetotem
+
+execute anchored feet positioned ~ ~-4 ~ if predicate cryptid:alter/axe run scoreboard players remove @s cryptid.ritual.stability 25
+execute anchored feet positioned ~ ~-4 ~ store success storage cryptid:ritual alter.axe int 1 if predicate cryptid:alter/axe
+
 
 ## Modify storage, stores Type Name
 execute if data storage cryptid:ritual {alter:{exorcise:1}} run data modify storage cryptid:ritual alter.type set value "exorcise"
 execute if data storage cryptid:ritual {alter:{revival:1}} run data modify storage cryptid:ritual alter.type set value "revival"
 execute if data storage cryptid:ritual {alter:{voidtotem:1}} run data modify storage cryptid:ritual alter.type set value "voidtotem"
 execute if data storage cryptid:ritual {alter:{upgradetotem:1}} run data modify storage cryptid:ritual alter.type set value "upgradetotem"
+execute if data storage cryptid:ritual {alter:{axe:1}} run data modify storage cryptid:ritual alter.type set value "axe"
+
 
 # INVALID alter 
-execute anchored feet positioned ~ ~-4 ~ unless predicate cryptid:alter/exorcise unless predicate cryptid:alter/revival unless predicate cryptid:alter/voidtotem unless predicate cryptid:alter/upgradetotem run function cryptid:rituals/result/invalidalter
+execute anchored feet positioned ~ ~-4 ~ unless predicate cryptid:alter/exorcise unless predicate cryptid:alter/revival unless predicate cryptid:alter/voidtotem unless predicate cryptid:alter/upgradetotem unless predicate cryptid:alter/axe run function cryptid:rituals/result/invalidalter

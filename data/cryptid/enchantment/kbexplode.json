@@ -1,0 +1,52 @@
+{
+  "anvil_cost": 0,
+  "description": "kbexplode",
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "feet"
+  ],
+  "supported_items": "minecraft:paper",
+  "weight": 1,
+  "effects": {
+    "minecraft:location_changed": [
+      {
+        "requirements": {
+          "condition": "minecraft:enchantment_active_check",
+          "active": false
+        },
+        "effect": {
+          "type": "minecraft:all_of",
+          "effects": [
+            {
+              "type": "minecraft:run_function",
+              "function": "cryptid:action/explosion/treekb"
+            },
+            {
+              "type": "minecraft:explode",
+              "attribute_to_user": false,
+              "knockback_multiplier": 2.5,
+              "radius": 5,
+              "create_fire": false,
+              "block_interaction": "trigger",
+              "small_particle": {
+                "type": "minecraft:sweep_attack"
+              },
+              "large_particle": {
+                "type": "sweep_attack"
+              },
+              "sound": "minecraft:ambient.basalt_deltas.mood"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
