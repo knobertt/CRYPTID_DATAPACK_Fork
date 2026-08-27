@@ -1,14 +1,17 @@
 
-##ancient evil
+
 scoreboard players set @s cryptid.player.titlecooldown 40
 
-
+##ancient evil
 execute if score .global cryptid.day matches 1 run tellraw @a {"text":"An ancient evil has awakened in the depths of the world","color":"dark_red"}
 
 execute if score .global cryptid.day matches 2 run function cryptid:events/cryptid/fireworks
 
 execute if score .global cryptid.day matches 4 run function cryptid:events/cryptid/tortured
 execute if score .global cryptid.day matches 4 run title @a actionbar ["",{"text":"\ua022","font":"minecraft:images"},{"text":" [RADIO] ","color":"red"},{"text":" A Tortured Soul has spawned nearby","color":"dark_red"}]
+
+##random tape
+execute if score .global cryptid.day matches 5 run function cryptid:action/give/spawntape
 
 execute if score .global cryptid.day matches 6 run function cryptid:events/cryptid/fractal
 execute if score .global cryptid.day matches 6 run title @a actionbar ["",{"text":"\ua022","font":"minecraft:images"},{"text":" [RADIO] ","color":"red"},{"text":" Warning large unidentified aerial phenomena ","color":"dark_red"}]
