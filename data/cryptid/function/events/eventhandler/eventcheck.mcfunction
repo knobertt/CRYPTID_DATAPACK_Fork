@@ -1,9 +1,4 @@
 
-###nosleeping
-
-execute if score @s cryptid.player.harmony matches -20000..-10000 if block ~ ~0.3 ~ #beds run setblock ~ ~ ~ air destroy
-execute if score @s cryptid.player.harmony matches -20000..-10000 if block ~ ~0.3 ~ #beds run tp @s ~ ~1 ~
-
 
 ### EVENT HANDLER
 execute unless score @s cryptid.event.random matches 1..90 run return fail
