@@ -8,7 +8,7 @@ scoreboard players add .current cryptid.eventcap 2
 
 ##radio factor
 execute if items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run playsound minecraft:cryptid.bone.knock ambient @a
-execute if items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run tellraw @a ["",{"text":"[RADIOLOG] An event is happening! <AVG SEVERITY: ","color":"#D01353"},{"score":{"name":".global","objective":"cryptid.world.fury"},"color":"#D01353"},{"text":">","color":"#D01353"}]
+execute if items entity @s weapon.mainhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run tellraw @a ["",{"translate":"chat.cryptid.radiolog.event_happening","color":"#D01353","with":[{"score":{"name":".global","objective":"cryptid.world.fury"}}]}]
 
 
 ############NOTE: most events should be DISABLED in the dimension
