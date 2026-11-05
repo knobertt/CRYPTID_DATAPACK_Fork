@@ -1,0 +1,1 @@
+summon armor_stand ~ ~ ~ {Invisible:1b,ArmorItems:[{id:paper,components:{enchantments:{"cryptid:bossshockwavekb":1},enchantment_glint_override:0b}},{},{},{}]}

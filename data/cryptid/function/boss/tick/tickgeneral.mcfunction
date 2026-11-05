@@ -14,7 +14,7 @@ execute if score @s cryptid.timer matches -1200 run kill @s[tag=!killignore]
 
 ###specialized ticks
 
-execute if entity @s[tag=boss.explosion] at @s run function cryptid:boss/tick/tickexplosion
+execute if entity @s[tag=boss.shockwave] at @s run function cryptid:boss/tick/tickshockwave
 execute if entity @s[tag=boss.skull] at @s run function cryptid:boss/tick/tickskull
 execute if entity @s[tag=boss.pillar] at @s run function cryptid:boss/tick/tickpillar
 execute if entity @s[tag=display.pillar] at @s run function cryptid:boss/tick/tickpillardisplay
