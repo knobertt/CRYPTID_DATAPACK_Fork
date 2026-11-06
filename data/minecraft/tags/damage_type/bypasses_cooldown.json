@@ -2,6 +2,7 @@
     "values": [
         "cryptid:lacerated",
         "cryptid:bleedout",
-        "cryptid:truedamage"
+        "cryptid:truedamage",
+        "cryptid:absorb"
     ]
 }

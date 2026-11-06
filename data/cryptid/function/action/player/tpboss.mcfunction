@@ -6,3 +6,4 @@ effect give @s minecraft:blindness 2 2 true
 
 
 damage @s 1 cryptid:chomp by @s
+tp @s @n[tag=boss.core2]

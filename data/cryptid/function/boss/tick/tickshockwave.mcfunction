@@ -15,21 +15,30 @@ execute if score @s[tag=right] cryptid.timer matches -65..-21 run tp @s ~ ~ ~ ~-
 execute if score @s[tag=right] cryptid.timer matches -90..-66 run tp @s ~ ~ ~ ~-5 ~
 
 
+##fx and damage near core
+execute if score @s cryptid.timer matches -3 run particle minecraft:explosion ~ ~-5 ~ 9 1 9 0.1 200
+execute if score @s cryptid.timer matches -50 as @a[distance=0..40] run playsound minecraft:entity.warden.sonic_charge ambient @a ~ ~ ~ 5 0.1
+execute if score @s cryptid.timer matches -92..-70 as @a[distance=0..6] run damage @s 1 cryptid:absorb by @s
 
-execute if score @s cryptid.timer matches -5 run particle minecraft:explosion ~ ~ ~ 9 1 9 0.1 200
 
 ## pull
-execute if score @s cryptid.timer matches -50 as @a[distance=0..40] run playsound minecraft:entity.warden.sonic_charge ambient @a ~ ~ ~ 5 0.1
-#execute if score @s cryptid.timer matches -128 as @a[distance=0..40] run playsound minecraft:entity.warden.sonic_charge ambient @a ~ ~ ~ 5 0.1
-
+execute if score @s cryptid.timer matches -45 as @a[distance=0..30] run effect give @s levitation 1 2
 execute if score @s cryptid.timer matches -85..-68 as @a[distance=11..30] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.03 ^-1 run function cryptid:boss/enchantexplosion/spawnshockwavekb
-
 execute if score @s cryptid.timer matches -90..-68 as @a[distance=0..11] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.04 ^-1.1 run function cryptid:boss/enchantexplosion/spawnshockwavekb
-execute if score @s cryptid.timer matches -85..-68 as @a[distance=0..6] run damage @s 8 cryptid:cryptid by @s
 
-##push
-execute if score @s cryptid.timer matches -120..-90 as @a[distance=0..30] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.07 ^0.65 run function cryptid:boss/enchantexplosion/spawnshockwavekb
 
+##half launch
+execute if score @s cryptid.timer matches -95..-90 as @a[distance=6..30] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.05 ^0.9 run function cryptid:boss/enchantexplosion/spawnshockwavekb
+#execute if score @s cryptid.timer matches -93 as @a[distance=0..30] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.01 ^ run function cryptid:boss/enchantexplosion/spawnshockwavekb
+
+# up and out launch
+execute if score @s cryptid.timer matches -91 as @a[distance=0..5] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.1 ^ run function cryptid:boss/enchantexplosion/spawnshockwavekb
+execute if score @s cryptid.timer matches -95..-93 as @a[distance=0..30] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.07 ^0.95 run function cryptid:boss/enchantexplosion/spawnshockwavekb
+
+
+
+
+## End
 execute if score @s cryptid.timer matches ..-100 at @s run tp @s ~ ~-0.2 ~
 execute if score @s cryptid.timer matches ..-110 at @s run tp @s ~ ~-0.2 ~
 execute if score @s cryptid.timer matches ..-120 at @s run tp @s ~ ~-0.2 ~

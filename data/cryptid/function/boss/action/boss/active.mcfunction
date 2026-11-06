@@ -12,8 +12,8 @@ execute unless entity @a[tag=boss.fight.1] run tag @s remove active
 ##tp lost players back
 
 
-execute as @a[tag=boss.fight.1, distance=40..] at @s run function cryptid:action/player/tpboss
-tp @a[tag=boss.fight.1, distance=40..] ~ ~ ~
+execute at @s positioned ~ ~10 ~ as @a[tag=boss.fight.1, distance=41..] run function cryptid:action/player/tpboss
+
 
 
 
@@ -52,7 +52,7 @@ execute if score @s boss.orbspawner matches 1.. run function cryptid:boss/action
 execute if score @s cryptid.bosstime matches 3000.. run scoreboard players set @s cryptid.bosstime 0
 
 ## Neuter boss debug 
-#return fail
+return fail
 
 
 execute if score @s[tag=!phase2] cryptid.bosstime matches 0..1000 run function cryptid:boss/tick/bossmain/phasea1
