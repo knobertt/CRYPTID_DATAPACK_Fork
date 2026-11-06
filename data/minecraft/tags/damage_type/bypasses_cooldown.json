@@ -1,6 +1,7 @@
 {
     "values": [
         "cryptid:lacerated",
-        "cryptid:bleedout"
+        "cryptid:bleedout",
+        "cryptid:truedamage"
     ]
 }

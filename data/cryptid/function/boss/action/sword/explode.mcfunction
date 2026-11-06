@@ -1,4 +1,5 @@
 damage @p[distance=0..3] 4 cryptid:chomp by @s
+
 effect give @p[distance=0..2] slowness 1 1 true
 
 

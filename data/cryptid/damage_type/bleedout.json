@@ -1,7 +1,7 @@
 {
   "message_id": "bleedout",
   "exhaustion": 0,
-  "scaling": "always",
+  "scaling": "never",
   "effects": "freezing",
   "death_message_type": "default"
 }
