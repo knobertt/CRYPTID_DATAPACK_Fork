@@ -27,7 +27,7 @@
           "effects": [
             {
               "type": "minecraft:run_function",
-              "function": "cryptid:boss/enchantexplosion/killshockwave"
+              "function": "cryptid:boss/enchantexplosion/killgeneralkb"
             },
             {
               "type": "minecraft:explode",

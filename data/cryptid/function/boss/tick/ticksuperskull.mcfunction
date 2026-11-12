@@ -13,7 +13,7 @@ tp @s ^ ^ ^0.3
 
 ##damage
 execute as @a[distance=0..12] at @s run damage @s 5 cryptid:chomp by @e[tag=boss.superskull, type=zombie, sort=nearest, limit=1]
-
+execute as @a[distance=0..12] run tag @s add cryptid.glitchscreen
 
 
 

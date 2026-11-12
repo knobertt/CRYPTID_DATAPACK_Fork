@@ -6,4 +6,4 @@ scoreboard players set @s cryptid.timer 40
 
 playsound minecraft:entity.generic.explode ambient @a ~ ~ ~ 1 0.1
 damage @p[distance=0..6] 6 minecraft:explosion by @s from @s
-damage @p[distance=0..6] 4 cryptid:truedamage by @s from @s
+execute as @p[distance=0..6] at @s run function cryptid:boss/action/general/truedamage {damage:2}

@@ -11,9 +11,21 @@ execute if score @s cryptid.timer matches ..-1000 run function cryptid:boss/acti
 
 ##check for blocks
 
-execute anchored feet unless block ^ ^ ^1 #cryptid:nonsolid unless block ^ ^ ^1 #minecraft:slabs run tp @s ~ ~ ~ ~180 ~
-execute anchored feet unless block ^ ^ ^2 #cryptid:nonsolid unless block ^ ^ ^2 #minecraft:slabs run tp @s ~ ~ ~ ~180 ~
-##turn if other pillar
+execute anchored feet positioned ^ ^ ^1 if predicate cryptid:boss_pillar_collide at @s run playsound entity.iron_golem.hurt ambient @a ~ ~ ~ 2 0.3
+execute anchored feet positioned ^ ^ ^1 if predicate cryptid:boss_pillar_collide at @s run tp @s ~ ~ ~ ~180 ~
+## Destruction
+execute anchored feet unless block ~ ~29 ~ light at @s positioned ~ ~ ~ run fill ~ ~ ~ ~ ~8 ~ air destroy
+execute anchored feet unless block ~ ~29 ~ light at @s positioned ~1 ~ ~ run fill ~ ~ ~ ~ ~8 ~ air destroy
+execute anchored feet unless block ~ ~29 ~ light at @s positioned ~-1 ~ ~ run fill ~ ~ ~ ~ ~8 ~ air destroy
+execute anchored feet unless block ~ ~29 ~ light at @s positioned ~ ~ ~1 run fill ~ ~ ~ ~ ~8 ~ air destroy
+execute anchored feet unless block ~ ~29 ~ light at @s positioned ~ ~ ~-1 run fill ~ ~ ~ ~ ~8 ~ air destroy
+
+execute anchored feet unless block ~ ~29 ~ light at @s positioned ~1 ~ ~1 run fill ~ ~ ~ ~ ~8 ~ air destroy
+execute anchored feet unless block ~ ~29 ~ light at @s positioned ~-1 ~ ~1 run fill ~ ~ ~ ~ ~8 ~ air destroy
+execute anchored feet unless block ~ ~29 ~ light at @s positioned ~1 ~ ~-1 run fill ~ ~ ~ ~ ~8 ~ air destroy
+execute anchored feet unless block ~ ~29 ~ light at @s positioned ~-1 ~ ~-1 run fill ~ ~ ~ ~ ~8 ~ air destroy
+
+execute anchored feet positioned ^ ^ ^4 if entity @e[distance=..2.2,tag=boss.pillar] at @s run playsound entity.iron_golem.hurt ambient @a ~ ~ ~ 2 0.3
 execute anchored feet positioned ^ ^ ^4 if entity @e[distance=..2.2,tag=boss.pillar] at @s run tp @s ~ ~ ~ ~180 ~
 
 ##switch ai
@@ -28,8 +40,11 @@ execute if score @s cryptid.random matches 2..5 run tag @s add playerwalk
 
 
 ##damage
-execute at @s as @s run damage @p[distance=0..4] 5 explosion by @s from @s
-execute as @p[distance=0..4] at @s run playsound minecraft:cryptid.chomper.bite ambient @a ~ ~ ~ 10 0.1
+execute if score .global cryptid.pillartimer matches 5..35 as @a[distance=0..3.2] run damage @s 4 explosion by @e[sort=nearest,limit=1,tag=boss.pillar]
+execute if score .global cryptid.pillartimer matches 5..35 as @a[distance=0..3.2] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.pillar] feet rotated ~ 0 positioned ^ ^-0.03 ^0.6 run function cryptid:boss/enchantexplosion/spawngeneralkb
+execute if score .global cryptid.pillartimer matches 5..35 as @a[distance=0..3.2] run function cryptid:boss/action/general/truedamage {damage:3}
+
+execute if score .global cryptid.pillartimer matches 5..35 as @a[distance=0..3.2] at @s run playsound minecraft:cryptid.chomper.bite ambient @a ~ ~ ~ 10 0.1
 
 
 ##movement

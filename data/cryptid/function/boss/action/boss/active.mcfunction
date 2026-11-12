@@ -3,7 +3,8 @@ scoreboard players add @s cryptid.bosstime 1
 
 ##add active
 tag @a[distance=0..50,tag=!bosscooldown] add boss.fight.1
-
+execute as @a if score @s cryptid.truedamage.immunity matches -2147483648..2147483647 run scoreboard players remove @s cryptid.truedamage.immunity 1
+execute as @a[scores={cryptid.truedamage.immunity=..0}] run scoreboard players reset @s cryptid.truedamage.immunity
 
 ##unactive
 execute unless entity @a[tag=boss.fight.1] run tag @s remove active
@@ -52,7 +53,7 @@ execute if score @s boss.orbspawner matches 1.. run function cryptid:boss/action
 execute if score @s cryptid.bosstime matches 3000.. run scoreboard players set @s cryptid.bosstime 0
 
 ## Neuter boss debug 
-return fail
+#return fail
 
 
 execute if score @s[tag=!phase2] cryptid.bosstime matches 0..1000 run function cryptid:boss/tick/bossmain/phasea1

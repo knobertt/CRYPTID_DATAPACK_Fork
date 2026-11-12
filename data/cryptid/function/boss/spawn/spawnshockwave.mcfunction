@@ -15,14 +15,14 @@ playsound minecraft:entity.warden.sonic_boom ambient @a ~ ~ ~ 5 0.1
 particle dust_color_transition{from_color:[0.88,0.12,0.31],to_color:[0.43,0.09,0.05],scale:4.0} ~ ~1 ~ 4 4 4 100 600
 
 
-execute as @a[distance=0..30] at @s run damage @s 5 cryptid:truedamage
+execute as @a[distance=0..45] at @s run damage @s 5 cryptid:truedamage
 
-execute as @a[distance=0..8] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.03 ^0.05 run function cryptid:boss/enchantexplosion/spawnshockwavekb
-execute as @a[distance=0..8] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.03 ^0.05 run function cryptid:boss/enchantexplosion/spawnshockwavekb
-execute as @a[distance=0..8] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.05 ^0.05 run function cryptid:boss/enchantexplosion/spawnshockwavekb
+execute as @a[distance=0..8] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.03 ^0.05 run function cryptid:boss/enchantexplosion/spawngeneralkb
+execute as @a[distance=0..8] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.03 ^0.05 run function cryptid:boss/enchantexplosion/spawngeneralkb
+execute as @a[distance=0..8] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.05 ^0.05 run function cryptid:boss/enchantexplosion/spawngeneralkb
 
-execute as @a[distance=0..15] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.01 ^0.04 run function cryptid:boss/enchantexplosion/spawnshockwavekb
-execute as @a[distance=0..15] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.01 ^0.04 run function cryptid:boss/enchantexplosion/spawnshockwavekb
+execute as @a[distance=0..15] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.01 ^0.04 run function cryptid:boss/enchantexplosion/spawngeneralkb
+execute as @a[distance=0..15] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.01 ^0.04 run function cryptid:boss/enchantexplosion/spawngeneralkb
 
-execute as @a[distance=0..30] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.03 ^0.04 run function cryptid:boss/enchantexplosion/spawnshockwavekb
-execute as @a[distance=0..30] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.03 ^0.04 run function cryptid:boss/enchantexplosion/spawnshockwavekb
+execute as @a[distance=0..30] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.03 ^0.04 run function cryptid:boss/enchantexplosion/spawngeneralkb
+execute as @a[distance=0..40] at @s anchored eyes facing entity @e[sort=nearest,limit=1,tag=boss.shockwave] feet rotated ~ 0 positioned ^ ^-0.03 ^0.04 run function cryptid:boss/enchantexplosion/spawngeneralkb

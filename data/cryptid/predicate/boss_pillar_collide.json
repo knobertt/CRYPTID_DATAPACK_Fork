@@ -1,0 +1,18 @@
+    {
+      "condition": "any_of",
+      "terms": [
+        
+      { "condition": "minecraft:location_check", "offsetX": 0, "offsetY": 29, "offsetZ": 0, "predicate": { "block": { "blocks": "minecraft:light" } } },
+      { "condition": "minecraft:location_check", "offsetX": 1, "offsetY": 29, "offsetZ": 0, "predicate": { "block": { "blocks": "minecraft:light" } } }, 
+      { "condition": "minecraft:location_check", "offsetX": -1, "offsetY": 29, "offsetZ": 0, "predicate": { "block": { "blocks": "minecraft:light" } } }, 
+
+      { "condition": "minecraft:location_check", "offsetX": 0, "offsetY": 29, "offsetZ": 1, "predicate": { "block": { "blocks": "minecraft:light" } } },
+      { "condition": "minecraft:location_check", "offsetX": 1, "offsetY": 29, "offsetZ": 1, "predicate": { "block": { "blocks": "minecraft:light" } } }, 
+      { "condition": "minecraft:location_check", "offsetX": -1, "offsetY": 29, "offsetZ": 1, "predicate": { "block": { "blocks": "minecraft:light" } } },
+
+      { "condition": "minecraft:location_check", "offsetX": 0, "offsetY": 29, "offsetZ": -1, "predicate": { "block": { "blocks": "minecraft:light" } } },
+      { "condition": "minecraft:location_check", "offsetX": 1, "offsetY": 29, "offsetZ": -1, "predicate": { "block": { "blocks": "minecraft:light" } } }, 
+      { "condition": "minecraft:location_check", "offsetX": -1, "offsetY": 29, "offsetZ": -1, "predicate": { "block": { "blocks": "minecraft:light" } } }
+
+  ] 
+}

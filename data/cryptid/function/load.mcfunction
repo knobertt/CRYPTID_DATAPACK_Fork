@@ -27,6 +27,7 @@ scoreboard objectives add cryptid.boss.musictime dummy
 scoreboard objectives add cryptid.boss.10 dummy
 scoreboard objectives add cryptid.squareswordtimer dummy
 scoreboard objectives add cryptid.pillartimer dummy
+scoreboard objectives add cryptid.truedamage.immunity dummy
 ####################PRIUMERS
 scoreboard objectives add primer.coal minecraft.mined:minecraft.coal_ore
 scoreboard objectives add cryptid.lookcounter dummy
